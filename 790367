@@ -1,0 +1,1798 @@
+body {
+    padding: -5px;
+    background: lightsteelblue;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -webkit-tap-highlight-color: #00FFFD;
+}
+
+.svgMe {
+    background-color: transparent;
+}
+
+#footer {
+    background: linear-gradient(to left, #9FA8DA, lightsteelblue);
+    padding-block-start: -30px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    max-height: 10.59375rem;
+    margin-right: -7.9px;
+    margin-left: -7.9px;
+    margin-bottom: -7.9px;
+    display: flex;
+    border-top: 3.5px solid black;
+}
+
+#footer dog::first-child {
+    align-content: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+#footer div:nth-child(1) {
+    border-right: 3px solid black;
+    width: 500px;
+}
+
+#footer div:nth-child(1) #rate-box {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    background-color: black;
+    padding: 5px;
+}
+
+#footer div:nth-child(1) #rate-box input[type=radio] {
+    accent-color: black;
+    border: 2px solid black;
+    margin-left: 6px;
+}
+
+#footer div:nth-child(2) {
+    border-left: none;
+}
+
+.mini-question {
+    background-image: url(images/questionBg.jpg);
+    background-repeat: no-repeat;
+    padding: 4.7px;
+    margin-bottom: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+@keyframes introRunBack {
+    from {
+        left: 0;
+    }
+    to {
+        left: 430px;
+    }
+}
+
+marker {
+    font-family: 'Permanent Marker';
+}
+
+.nav-open {
+    max-height: 5em;
+}
+
+.scores-appear {
+    animation: 1s 1 yeet ease-in;
+}
+
+@keyframes yeet {
+    from {
+        color: rgba(0,0,0,0);
+    }
+    to {
+        color: rgba(0,0,0,1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#social-medias {
+    max-height: 4.59375rem;
+    background: transparent;
+    margin-left: -2.1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+.white-text {
+    color: white;
+}
+
+.cyan-thumb::-webkit-scrollbar-thumb {
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#gray-scroll-bar::-webkit-scrollbar {
+    width: 4px;
+    background-color: black;
+}
+#footer .cyan-thumb:nth-child(2)::-webkit-scrollbar-thumb {
+    background-color: white !important;
+    height: 67px;
+}
+#footer .cyan-thumb:nth-child(2)::-webkit-scrollbar {
+    background-color: black !important;
+}
+
+header {
+    position: relative;
+    top: 1;
+    background-image: url(images/bg/web-development-concept-person-using-260nw-1890313726.webp);
+    padding: 20px;
+    margin-top: -0.8rem;
+    resize: none;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    padding-block-end: 30px;
+    margin-bottom: 10px;
+    width: 359.8px;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+header cour {
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    top: 17.2;
+    right: 7;
+}
+
+header .text:hover {
+    text-decoration: underline #9FA8DA;
+    text-decoration-thickness: 0.235em;
+    text-decoration-skip-ink: none;
+}
+
+#warning-sign {
+    background-color: #FFE389;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.popup-box {
+    padding: 15.57px;
+    background-color: lightsteelblue;
+    height: 300px;
+    border: 2px solid black;
+    position: fixed;
+    overflow: scroll;
+    bottom: 3700;
+    transform: scale(0, 0);
+    opacity: 0;
+    top: 156;
+    margin-left: 15px;
+    border-radius: 10px;
+    width: 312px;
+    z-index: 999;
+}
+
+[alt="busted code:("] {
+    font-family: 'Courier New';
+    font-family: bolder;
+}
+
+.popup-box #firstView {
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: frameMoveLeft 1 0.65s ease;
+}
+
+@keyframes frameMoveLeft {
+    from {
+        right: 0;
+    }
+    to {
+        right: 400;
+    }
+}
+
+.popup-box #firstView #con {
+    padding: 3px;
+    background-color: transparent;
+    border-right: 2px solid black;
+}
+
+.popup-box #firstView #con2 input {
+    border: 1px solid black;
+    background-color: aliceBlue;
+    width: 172;
+    font-family: 'Courier New';
+    color: black;
+}
+
+[placeholder="Search your stuff here"] {
+    font-family: 'Courier New';
+    color: gold;
+} 
+
+.popup-box h2, .popup-box div h3 {
+    text-align: center;
+    font-family: Courier New;
+}
+
+.popup-box div #jumper {
+    height: 100;
+    width: 125;
+    border: 1.56px solid black;
+}
+
+.cookieNotification {
+    padding: 4.5px;
+    background-color: wheat;
+    position: fixed;
+    top: 573;
+    opacity: 1;
+    height: 93;
+    width: 400px;
+    margin-left: -7.9px;
+    border-top: 2px solid black;
+    margin-right: -7.9px;
+    animation: 1s Run 1 linear;
+    border-left: 2px solid black;
+}
+
+@keyframes Run {
+    from {
+        left: 240;
+    }
+    to {
+        left: 8;
+    }
+}
+
+.cookieNotification cour {
+    text-align: center !important;
+    font-size: 20px;
+    position: relative;
+    bottom: 12;
+}
+
+.cookieNotification .acceptBtn {
+    border: 1px solid black;
+    background-color: aliceBlue;
+    color: black;
+    padding: 2px;
+}
+
+.cookieNotification .deny-Button {
+    border: 1px solid black;
+    background-color: salmon;
+    color: black;
+    padding: 2px;
+}
+
+.popup-box2 {
+    padding: 10px;
+    background: white;
+    border: 2px solid black;
+    position: fixed;
+    margin-left: -0.7px;
+    margin-right: -0.7px;
+    height: 300px;
+    width: 343px;
+    top: 194;
+    user-select: none;
+    transform: scale(0, 0);
+    opacity: 0;
+    z-index: 998;
+}
+
+#parBox {
+    text-align: center;
+    font-family: 'Courier New';
+    font-weight: bolder;
+    height: 100;
+}
+
+#parBox #title-of-the-box {
+    font-size: 25.6782px;
+    font-style: oblique;
+}
+
+.popup-box2 #parBox #rulecircle {
+    white-space: nowrap;
+    position: relative;
+    left: 50;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: lightgreen;
+    height: 19.5;
+    width: 19;
+}
+
+.popup-box2 .pop {
+    border: 1px solid black;
+    background-color: #9FA8DA;
+    color: black;
+}
+
+.gamePopUp {
+    padding: 10px;
+    background: url(images/lol.gif);
+    border: 2px solid black;
+    position: fixed;
+    margin-left: -0.7px;
+    margin-right: -0.7px;
+    height: 300px;
+    width: 343px;
+    top: 156;
+    user-select: none;
+    color: white;
+    z-index: 997;
+    opacity: 0;
+    transform: scale(0, 0);
+}
+
+.continueTxt {
+    padding: 3px;
+    position: relative;
+    left: 150px;
+}
+
+.gamePopUp .pop2 {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+.gamePopUp #parBox {
+    overflow: scroll;
+    height: 234;
+    color: white;
+}
+
+.gamePopUp #parBox #first-cute-container,
+.gamePopUp #parBox #second-cute-container {
+    padding: 3px;
+    width: 200;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gamePopUp #parBox #first-cute-container cour:last-child,
+.gamePopUp #parBox #second-cute-container cour:last-child {
+    font-size: 9px;
+}
+
+.gamePopUp #parBox #first-cute-container cour:last-child {
+    background-color: black;
+    padding: 2px;
+}
+
+.gamePopUp #parBox #second-cute-container cour:last-child {
+    background-color: wheat;
+    padding: 2px;
+    color: black;
+}
+
+.gamePopUp #parBox #table {
+    background-color: transparent;
+    padding-left: 2px;
+}
+
+.gamePopUp #parBox #table div {
+    padding: 5px;
+    border: 1px solid black;
+    color: black !important;
+    background-color: white;
+}
+
+@keyframes nextView {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 324px;
+    }
+}
+
+@keyframes scaled {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1.12, 1);
+    }
+}
+
+@keyframes scaledTwo {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes scaledThree {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(0, 0);
+    }
+}
+
+@keyframes scaledOut {
+    from {
+        transform: scale(1.21, 1);
+    }
+    to {
+        transform: scale(0, 0);
+    }
+}
+
+@keyframes wut {
+    from {
+        left: 150;
+    }
+    to {
+        left: 0;
+    }
+} 
+
+.popup-box #mainpoint cour {
+    font-weight: bolder;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.popup-box #mainpoint {
+    height: 100;
+    overflow: scroll;
+    border: 1.3px solid black;
+    background: #9FA8DA;
+    padding: 15px 8px 15px 8px;
+}
+
+@media screen and (min-width: 480px) {
+    #warning-sign {
+        background-color: red;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .subTitles {
+        font-size: 20px !important;
+        font-weight: 100;
+    }
+    .cyan-thumb::-webkit-scrollbar-thumb {
+        background: crimson;
+    }
+    #footer {
+        text-align: center !important;
+        padding: 10px !important;
+        border-radius: 0px !important;
+        font-size: 23px;
+        padding: 26px !important;
+        background-color: steelblue;
+    }
+    #footer div:nth-child(1) {
+        padding: 15px !important;
+        border: 3px solid black;
+        height: 123px;
+    }
+    #footer div:nth-child(2) {
+        border-right: 3px solid black;
+        font-size: 20px !important;
+    }
+    #footer div #social-medias {
+        height: 100px;
+        width: 300px;
+    }
+    body {
+        background: wheat !important;
+    }
+    header {
+        font-size: 25px;
+        padding: 20px;
+        width: 44.74375rem;
+    }
+    
+    #ham {
+        display: none !important;
+    }
+
+    #flex-container article div:nth-child(3) img {
+        margin-left: 50% !important;
+    }
+    #flex-container article, #flex-container #gameDescription {
+        margin-left: 3% !important;
+        margin-right: 3% !important;
+    }
+    #flex-container article .barGroup #grass {
+        margin-right: 100% !important;
+    }
+    #game {
+        height: 150px !important;
+        width: 37.6em !important;
+        background-repeat: round !important;
+    }
+    .ScoreBoard #gameResults {
+        width: 34rem !important;
+    }
+    .navigation-bar a {
+        font-size: 25px !important;
+    }
+    .navigation-bar div a:hover, .navigation-bar div a:active {
+        font-size: 28px;
+    }
+    #intro, #intro1, #intro2, #intro3 {
+        font-size: 25px !important;
+        margin-left: 12px !important;
+        width: 567 !important;
+        border-radius: 10px;
+        padding: 23px !important;
+        border: 2px solid black !important;
+    }
+    #intro1 {
+        margin-top: 12px !important;
+    }
+    #intro2 {
+        margin-top: 12px !important;
+    }
+    nope .list-bg :is(details) {
+        text-align: center;
+    }
+    nope .list-bg :is(li) {
+        padding-block: 12px 12px !important;
+        width: 36.9em;
+        border: 1px solid black;
+    }
+    #flex-container {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    #flex-container article div div > dog {
+        padding: 10px;
+    }
+    #languagebox {
+        padding: 16px !important;
+    }
+    #languagebox dog:last-child {
+        color: white !important;
+    }
+    #htmlp {
+        height: 100px !important;
+        width: 100px !important;
+    }
+    #cssp {
+        height: 76px !important;
+        width: 76px !important;
+    }
+    #dog-flex {
+        text-transform: none !important;
+    }
+    #menu {
+        margin-right: 5%;
+        margin-left: 5%;
+        background: lavender !important;
+    }
+    dog {
+        font-family: 'PrintMe' !important;
+        font-size: 16px !important;
+    }
+    .navigation-bar {
+        padding: 12px;
+        max-height: 3.8rem !important;
+        width: 44.74375rem !important;
+        height: 10rem !important;
+    }
+    #card-background {
+        background-color: black !important;
+        color: white;
+        width: 416px;
+        margin-left: 5.6em;
+        padding: 3px;
+    }
+    mark {
+        background-color: black !important;
+        color: white !important;
+    }
+    #indigo {
+        padding: 25px;
+    }
+    #red-list {
+        padding: 25px;
+    }
+    #yellow-list {
+        padding: 25px;
+    }
+    #cyanLike {
+        padding: 25px;
+    }
+    #game-controls button {
+        font-family: 'PrintMe' !important;
+    }
+    .emote {
+        font-size: 320% !important;
+    }
+    .bar {
+        border-color: gray !important;
+    }
+    h4 {
+        padding: 15.7px !important;
+    }
+    #game {
+        width: 444 !important;
+    }
+    h1 {
+        webkit-text-stroke: black 2px;
+    }
+}
+h1 {
+    font-family: 'Courier New';
+    font-size: 2em;
+}
+
+[fontDog] {
+    font-family: "GoodDog";
+}
+
+.navigation-bar {
+    background: lightsteelblue;
+    z-index: 2;
+    position: fixed;
+    padding: 12px;
+    webkit-tap-highlight-color: #5C5FAB;
+    width: 22.8rem;
+    border: 2.5px solid black;
+    margin: -0.7rem 2px 0px -0.7rem;
+    max-height: 3.8em;
+    overflow: hidden;
+}
+
+.navigation-bar div a {
+    margin-left: 4%;
+    text-decoration: none;
+    margin-right: 15px;
+    font-family: "GoodDog";
+    font-size: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+.navigation-bar div a:hover, .navigation-bar div a:active {
+    font-size: 24px !important;
+}
+
+.navigation-bar div > .img-nav {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navigation-bar div > .img-nav:hover {
+    border: 1px solid black !important;
+}
+
+.bar {
+    border: 2px solid lavender;
+}
+
+@keyframes displayedAs {
+    from {
+        display: initial;
+    }
+    to {
+        display: none;
+    }
+}
+
+.nav-open {
+    animation: 1s openMe linear;
+}
+
+@keyframes openMe {
+    from {
+        max-height: 3.8em;
+    }
+    to {
+        max-height: 5.8em;
+    }
+}
+
+.nav-close {
+    animation: 1s closeMe linear;
+}
+
+@keyframes closeMe {
+    from {
+        max-height: 5.8em;
+    }
+    to {
+        max-height: 3.8em;
+    }
+}
+
+.ScoreBoard {
+    height: 99px;
+    width: 325px;
+    background-color: wheat;
+    border: 2px solid black;
+    overflow: scroll;
+}
+
+.ScoreBoard #gameResults :webkit-scrollbar {
+    width: 28px;
+}
+
+.ScoreBoard #gameResults :webkit-scrollbar-track {
+    background-color: black;
+}
+
+.ScoreBoard #gameResults :webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.ScoreBoard #gameResults :webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
+
+.ScoreBoard .gameInfo .introduction {
+    position: relative;
+    bottom: 100px;
+    color: black !important;
+    background-color: steelblue;
+    padding: 10px;
+    width: 163px
+}
+
+.ScoreBoard .gameInfo dog:nth-child(2) {
+    color: black;
+    position: relative;
+    left: 51% !important;
+    bottom: 125.6px !important;
+}
+
+.ScoreBoard .gameInfo dog:nth-child(2) var {
+    font-style: normal;
+    background-color: black;
+    color: white;
+    padding: 2px;
+}
+
+.ScoreBoard #gameResults {
+    background-color: transparent;
+    border-right: 3px solid black;
+    width: 50%;
+    border-bottom: 3px solid black;
+    border-left: 0px solid transparent;
+    height: 100px;
+    overflow: scroll;
+}
+
+.ScoreBoard #gameSettings {
+    background-color: #4B371C;
+    position: relative;
+    left: 50%;
+    bottom: 100;
+    width: 163.5px;
+    height: 100px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 3px solid black;
+    overflow: scroll;
+}
+
+[placeholder] {
+    text-align: center;
+}
+
+[altline] {
+    text-align: justify;
+}
+
+[altline=center] {
+    text-align: center;
+}
+
+[altline=left] {
+    text-align: left;
+}
+
+[altline=right] {
+    text-align: right;
+}
+
+dog {
+    font-family: "GoodDog";
+    font-size: 13.5px;
+}
+
+cour {
+    font-family: 'Courier New';
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.color-chart {
+    background-color: white;
+    margin-inline: 10px 10px;
+    max-width: 500px;
+    border: 2px solid black;
+}
+
+.color-chart #indigo {
+    list-style-type: disc;
+    background-color: indigo;
+}
+
+.color-chart #indigo::marker {
+    color: indigo;
+}
+
+.color-chart #red-list {
+    list-style-type: disc;
+    background-color: red;
+}
+
+.color-chart #red-list::marker {
+    color: red;
+}
+
+.color-chart #yellow-list {
+    list-style-type: disc;
+    background-color: yellow;
+}
+
+.color-chart #yellow-list::marker {
+    color: yellow;
+}
+
+.color-chart #cyanLike {
+    list-style-type: disc;
+    background-color: #00FFEC;
+}
+
+.color-chart #cyanLike::marker {
+    color: #00FFEC;
+}
+
+.color-chart li {
+    margin-right: 0px;
+    margin-left: -0.7em;
+    padding: 5px;
+    font-size: 13.5px;
+    font-family: "GoodDog", Times New Roman, Georgia;
+    color: black !important;
+}
+
+#search-bar {
+    height: 10px;
+    width: 100px;
+    padding: 10px;
+    left: 20%;
+    position: relative;
+    border: 2px solid white;
+    background-color: white;
+    border: 2px solid black;
+}
+
+#search-bar [placeholder=Search] {
+    color: white;
+}
+
+#flex-container {
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    border: 2px solid black;
+    min-height: 40em;
+    padding: 10px;
+    color: black;
+    flex-direction: row;
+    justify-content: flex-start;
+    writing-mode: horizontal-tb;
+    padding-block: 15px 15px;
+}
+
+#flex-container b {
+    display: initial;
+}
+
+#flex-container article div dog {
+    justify-content: left;
+    align-content: flex-end;
+}
+
+#flex-container article div div dog:nth-child(2) {
+    background-color: navajowhite;
+    padding: 5px;
+}
+
+#flex-container article div div dog:nth-child(2) a {
+    text-decoration-line: overline;
+}
+
+#flex-container article div #my-img {
+    display: flex;
+    margin-left: 50%;
+    border-radius: 50%;
+    margin-top: -2rem;
+    stroke-width: 5px;
+    fill: red;
+}
+
+#flex-container article div div {
+    background-color: chocolate;
+    padding: 2px;
+    max-height: 30em;
+    overflow: visible;
+    border: 2px solid black;
+}
+
+#flex-container article s {
+    color: red;
+    display: flex;
+}
+
+#flex-container article .barGroup {
+    height: 35.6;
+    position: relative;
+    left: 430px;
+}
+
+.soBright {
+    filter: brightness(100%);
+}
+
+#flex-container article .barGroup hr {
+    border: 2px dashed black;
+}
+
+#flex-container article .text {
+    text-decoration: underline #9FA8DA;
+    text-decoration-thickness: 0.235em;
+    text-decoration-skip-ink: none;
+}
+
+#flex-container article .barGroup #grass {
+    height: 34;
+    width: 325;
+    position: relative;
+    bottom: 12px;
+    border: 1px solid black;
+}
+
+@keyframes changeFrame {
+    from {
+       background-image: none; 
+    }
+    to {
+        background-image: url(/storage/emulated/0/Download/UncomfortableWelllitDrever-size_restricted.gif);
+    }
+}
+
+#game-controls {
+    background-color: navajowhite;
+    padding: 15px;
+    overflow: scroll;
+    user-select: none;
+    height: 76.5px;
+    border: 2px solid black
+}
+
+#game-controls button {
+    padding: 5px;
+    background-image: url(images/IMG_20221011_135934.jpg);
+    image-rendering: high-quality;
+    image-orientation: 90deg;
+    font-family: 'GoodDog';
+    font-style: normal;
+    margin: 3.7px;
+    border-radius: 10px;
+}
+
+#game {
+    background-image: url(assets/gifs/me.jpg);
+    height: 150px;
+    width: 325px;
+    border: 2px solid black;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/*#game2 {
+    background-color: black;
+    height: 200px;
+    width: 325px;
+    border: 2px solid black;
+    overflow: hidden;
+    z-index: 3; 
+}
+
+#game2 #platform {
+    height: 25;
+    width: 334;
+    background: linear-gradient(to right, white, lightsteelblue);
+    padding: 5px;
+    position: relative;
+    top: 176px;
+}*/
+
+#screen-background {
+    background-color: rgba(0, 0, 128, .3);
+    text-align: center;
+    position: relative;
+    bottom: 251%;
+    color: white;
+    padding: 52;
+    opacity: 2;
+}
+
+#screen-background #screen-button {
+    margin-left: 5px;
+    opacity: 0;
+}
+
+#screen-background #screen-button:hover {
+    color: black;
+}
+
+@keyframes buttonOpac {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes collect {
+    0% {
+        left: auto;
+        bottom: auto;
+    }
+    5% {
+        left: -2px;
+        bottom: 5;
+    }
+    18% {
+        left: -9.6px;
+        bottom: 14.5;
+    }
+    35% {
+        left: -20px;
+        bottom: 25;
+    }
+    50% {
+        left: -56.7px;
+        bottom: 38;
+    }
+    67% {
+        left: -62px;
+        bottom: 45;
+    }
+    80% {
+        left: -90px;
+        bottom: 47;
+    }
+    92% {
+        left: -111px;
+        bottom: 50;
+    }
+    100% {
+        bottom: 76;
+    }
+}
+
+@keyframes collected {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes buttonOpac2 {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0.2;
+    }
+    51% {
+        opacity: 0.3;
+    }
+    56% {
+        opacity: 0.5;
+    }
+    67% {
+        opacity: 0.7;
+    }
+    78% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#cookieMeter {
+    position: relative;
+    bottom: 249.7% !important;
+    border-radius: 10px;
+    left: 32%;
+    border: 1px solid black;
+    accent-color: chocolate;
+    height: 24;
+    width: 68;
+}
+
+#cookieMeter:-webkit-meter-optimum::-webkit-meter-bar {
+    background: brown;
+}
+
+#cookieMeter:-webkit-meter-sub-optimum::-webkir-meter-bar {
+    background: chocolate;
+}
+
+#cookieMeter:-webkit-meter-sub-sub-optimum::-webkit-meter-bar {
+    background: wheat;
+}
+
+#save-file {
+    font-size: 23px;
+    left: 91%;
+    position: relative;
+    bottom: 125%;
+}
+
+#timer {
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    width: 100;
+    border: 2px solid black;
+    left: 189.4px;
+    bottom: 214%;
+}
+
+#gameCookie {
+    position: relative;
+    left: 22.5% !important;
+    bottom: 180.3%;
+}
+
+#timer #timer1,
+#timer #timer2,
+#timer #timer3,
+#timer #timer4,
+#timer #timer5,
+#timer #timer6 {
+    color: black;
+    font-style: normal;
+    font-family: Monaco,'Courier New',monospace;
+}
+
+#item1 {
+    font-size: 20px;
+    left: 91%;
+    position: relative;
+    bottom: 12.5rem;
+    display: initial;
+    z-index: 0;
+    text-shadow: 0 0 8.9px cyan;
+}
+
+#stopwatch {
+    color: white;
+    background-color: gray;
+    border: 2px solid black;
+    position: relative;
+    bottom: 76%;
+    left: 176.4px;
+    text-align: center;
+    width: 145px;
+    z-index: 1;
+}
+
+#character {
+    font-size: 50px;
+    position: relative;
+    top: 88.3px;
+    z-index: 0;
+}
+
+@keyframes byeSpeedRun {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.touchJump {
+    animation: 945ms jumpChar linear;
+}
+
+@keyframes jumpChar {
+    0% {
+        top: 88.3px;
+    }
+    30% {
+        top: 29px;
+    }
+    71% {
+        top: 29px;
+    }
+    100% {
+        top: 88.3px;
+    }
+}
+
+#block {
+    height: 35%;
+    width: 32.5px;
+    position: relative;
+    top: 2.2rem;
+    left: 91%;
+}
+
+#projectile {
+    /*background-color: lightgray;
+    border: 1px solid white;
+    height: 12px;
+    width: 10px;*/
+    position: relative;
+    left: 44px;
+    bottom: 100%;
+    z-index: 1;
+    /*border-radius: 100%*/
+}
+.shoot {
+    animation: 1.7s shootMe infinite linear;
+}
+
+@keyframes shootMe {
+    0% {
+        left: 44px;
+    }
+    100% {
+        left: 321px;
+    }
+}
+
+#gameOver {
+    position: relative;
+    bottom: 114%;
+    left: 38%;
+    font-weight: 1000;
+    opacity: 0;
+}
+
+.blockRun {
+    animation: 1.7s run infinite linear;
+}
+
+@keyframes run {
+    from {
+        left: 91%;
+    }
+    to {
+        left: -40px;
+    }
+}
+
+#spikes {
+    height: 20px;
+    width: 76px;
+    left: 23.7em;
+    position: relative;
+    bottom: 50%;
+}
+.spikeAnimationMove {
+    animation: 1.7s spikesrun infinite linear;
+}
+
+@keyframes spikesrun {
+    from {
+        left: 23.7em;
+    }
+    to {
+        left: -80px;
+    }
+}
+
+.Coin {
+    animation: 1.7s Coinrun infinite linear;
+}
+
+@keyframes Coinrun {
+    from {
+        left: 30rem;
+    }
+    ro {
+        left: -80px;
+    }
+}
+
+#gameName {
+    color: black;
+    font-size: 1.1982em;
+    position: relative;
+    bottom: 120%;
+    background: wheat;
+    padding: 2px;
+    font-family: 'Courier New';
+}
+
+.bigCirc {
+    background-color: gray;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50;
+    position: absolute;
+}
+
+.bigCirc #smallCirc {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+.bigCirc #smallCirc #evenSmallerCirc {
+    background-color: gray;
+    padding: 2px;
+}
+
+.bigCirc #smallCirc #evenSmallerCirc cour {
+    position: absolute;
+    right: 12px;
+}
+
+.bigCirc, #smallCirc, #evenSmallerCirc {
+    border-radius: 50%;
+}
+
+#flex-container article div div::webkit-scrollbar {
+    width: 20px;
+}
+
+#flex-container hr, #footer hr {
+    border-radius: 10px;
+}
+
+#flex-container article div div::webkit-scrollbar-track {
+    background-color: limegreen;
+}
+
+#flex-container article div div::webkit-scrollbar-thumb {
+    background-color: black;
+    border: 2px solid green;
+}
+
+#flex-container article div div::webkit-scrollbar-thumb:hover {
+    background-color: yellow;
+}
+
+#flex-container article div h2 {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black !important;
+    border: 2px solid hsl(141deg, 100%, 50%);
+    color: white;
+    /*background-color: hsl(321deg, 59%, 83%);*/
+}
+
+#flex-container article div .mytime {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 30%;
+}
+
+#flex-container article div div:nth-child(4) {
+    user-select: none;
+    cursor: progress;
+}
+
+#flex-container a[title=freefoodcamp] {
+    display: flex;
+    background-color: white;
+    border: 2px solid chocolate;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+a {
+    color: black;
+}
+
+a:hover a:active:not(img) {
+    background-color: transparent;
+    border: 1px solid steelblue;
+    border-radius: 50%;
+    padding: 3px;
+    color: gold;
+    text-decoration: overline;
+    transition: margin-top 1s 1;
+}
+
+a:hover a:active:not(img):hover {
+    margin-top: 12px;
+}
+
+a img:hover {
+    box-shadow: 0 0 26px brown, 0 0 25px chocolate, 0 0 50px navajowhite;
+}
+
+#intro, #intro1, #intro2, #intro3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, snow, lightsteelblue);
+    padding: 16.7px;
+    width: 322;
+    border: 2.3px solid black;
+    text-align: center;
+    color: black;
+    font-family: 'Courier New';
+    position: relative;
+    left: 430px;
+    user-select: none;
+}
+
+.disappeared {
+    animation: disappear 1.2s 1 linear;
+}
+
+.reappear {
+    animation: appears 1.6s 1 linear;
+}
+
+@keyframes disappear {
+    from {
+        color: rgba(255, 255, 255, 1);
+    }
+    to {
+        color: rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes appears {
+    from {
+        color: rgba(255, 255, 255, 0);
+    }
+    to {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes introRun {
+    from {
+        left: 430px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+#dog-flex {
+    display: flex;
+    text-transform: capitalize;
+}
+
+#languagebox {
+    background: linear-gradient(to left, white, #9FA8DA, lightsteelblue);
+    padding: 5px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+@keyframes borderChange {
+    0% {
+        border-left: 7.6px solid black;
+    }
+    25.4% {
+        border-left: none;
+        border-top: 7.6px solid black;
+    }
+    45% {
+        border-left: none;
+        border-top: none;
+        border-right: 7.6px solid black;
+    }
+    67% {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 7.6px solid black;
+    }
+    100% {
+        border-top: none;
+        border-right: none;
+        border-bottom: 7.6px solid black;
+        border-left: 7.6px solid black;
+    }
+}
+
+nope {
+    list-style-image: url(images/bye.png);
+}
+
+nope .list-bg {
+    background-color: black;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    color: white !important;
+    padding: 10px;
+}
+
+nope li {
+    border: 1px solid red;
+    border-radius: 0%;
+    height: 83px;
+    width: 17.3em;
+    text-decoration-line: underline;
+    padding-block: 10px 10px;
+}
+
+nope li:hover nope li:focus {
+    background-image: url(https://media4.giphy.com/media/9lAR6gmuKyje0TVLsD/giphy-downsized-large.gif);
+    background-size: cover;
+    animation-delay: 1.5s;
+    animation: byelol 1s infinite running ease-in;
+    image-rendering: smooth;
+}
+
+nope li a {
+    text-decoration: none;
+}
+
+nope .list-bg details li {
+    background-color: ivory;
+    border: 2px solid black;
+}
+
+details summary {
+    font-family: 'Courier New';
+    font-weight: bolder;
+}
+
+#php {
+    display: flex;
+    margin-left: 14em;
+    margin-top: -3.1rem;
+    height: 78;
+    width: 80;
+}
+
+#menu {
+    background: #9FA8DA;
+    color: black;
+    font-family: "GoodDog";
+    border: 2px solid black;
+    border-bottom: none;
+    padding-block: 5px 5px;
+    padding-inline-start: 1.7em;
+    overflow: scroll;
+}
+
+.shinyObject {
+    animation: 1.3s infinite shinyObj ease-in-out;
+}
+
+@keyframes shinyObj {
+    0% {
+        background: #9FA8DA;
+    }
+    50% {
+        background: linear-gradient(to left, #9FA8DA, white);
+    }
+    100% {
+        background: linear-gradient(to left, white, #9FA8DA);
+    }
+}
+
+#menu .list-bg {
+    padding: 5px;
+}
+
+details {
+    margin-bottom: 0px;
+}
+
+details hr {
+    border: 5px solid gray;
+    margin: 0px 0.1em 0px -27.1;
+    z-index: 1;
+}
+
+details:nth-child(2) li a:hover {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+@keyframes flowcolor {
+    from {
+        border-color: gray;
+    }
+    to {
+        border-color: lightgreen;
+        filter: brightness(100%);
+    }
+}
+var #lang-name #lang-name2 {
+    font-style: normal;
+}
+
+#lang-name {
+    margin-left: 3.7em;
+}
+
+#lang-name2 {
+    margin-left: 2.4rem;
+}
+
+#lang-name3 {
+    margin-left: 3.9em;
+}
+
+#divdeez {
+    background: linear-gradient(to right, chocolate, navajowhite) !important;
+    margin-block: 12px 12px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#htmlp {
+    display: flex;
+    height: 78;
+    width: 80;
+}
+
+#cssp {
+    display: flex;
+    margin-left: 4.2em;
+    margin-top: -3.7rem;
+}
+
+#jsp {
+    display: flex;
+    margin-left: 9em;
+    margin-top: -4.5rem;
+}
+
+[up] {
+    text-transform: uppercase;
+}
+
+[cap] {
+    text-transform: capitalize;
+}
+
+[down] {
+    text-transform: lowercase;
+}
+
+[nocap] {
+    text-transform: none;
+}
+
+#my-img {
+    display: flex;
+    margin-left: 50%;
+    border-radius: 50%;
+    margin-top: -2rem;
+    border: 3px solid black;
+}
+
+#card-background {
+    background: linear-gradient(to left, white, lightsteelblue);
+    border: 3px solid black;
+}
+
+mark {
+    display: flex;
+    background: lightgreen;
+    padding: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#ul-header {
+    background-image: url(images/hack2.jpg);
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: white;
+    margin-top: 0px;
+    border-bottom: 2px solid black;
+    margin-left: -1.35em;
+    font-family: 'Courier New';
+}
+
+.tman select {
+    border: 3px solid black;
+    margin-left: -27.1px;
+    margin-top: -0.4em;
+    margin-bottom: -1.2em;
+}
+
+div #select-colors {
+    margin-left: -1.9em;
+    margin-top: -0.2em;
+    margin-bottom: -1.4em;
+    border-color: white;
+    opacity: 0;
+    border: 2.3px solid green;
+    z-index: 1;
+}
+
+.paragraph-0 {
+    font-size: 100px;
+}
+
+.paragraph-1 {
+    font-size: 100px;
+}
+
+.paragraph-2 {
+    font-size: 100px;
+}
+
+.paragraph-3 {
+    font-size: 100px;
+}
+
+.paragraph-4 {
+    font-size: 100px;
+}
+
+.paragraph-5 {
+    font-size: 100px;
+}
+
+.paragraph-6 {
+    font-size: 100px;
+}
+
+#met {
+    cursor: wait;
+}
+
+#met:hover {
+    border-radius: 0.5rem;
+    padding: 4px;
+    background-color: white;
+    border: 2px solid limegreen;
+}
+
+/*# sourceMappingURL=Sass.scss.map */
+
+/*# sourceMappingURL=gigachad.css.map */
