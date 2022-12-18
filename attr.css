@@ -1,0 +1,39 @@
+/*////////
+// attr //*/
+li[id=text] {
+    animation: 1s rainbow infinite;
+}
+[contenteditable="true"] {
+    caret-color: blue;
+    animation: 1s caret-an infinite running forwards linear;
+}
+[alt="no"] {
+    color: red;
+}
+input [type="radio"] {
+    accent-color: hsl(180, 80%, 20%);
+}
+input [checked] {
+    accent-color: blue;
+}
+[data-list-item1="mean"] {
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+    filter: opacity(0.6);
+    z-index: 999;
+}
+[data-list-item2="bird"] {
+    background-color: red;
+    padding: 15px;
+    z-index: 999;
+    filter: opacity(0.5);
+    text-align: right;
+}
+[data-list-item3="triangle"] {
+    background-color: green;
+    z-index: 999;
+    padding: 5px;
+    text-align: justify;
+    opacity: 0.25;
+}

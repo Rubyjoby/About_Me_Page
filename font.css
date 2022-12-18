@@ -1,0 +1,16 @@
+@font-face {
+    src: url(GoodDog.ttf);
+    font-family: 'GoodDog';
+}
+@font-face {
+    src: url(SourceSansPro-Black.ttf);
+    font-family: 'Sans-Pro-Black';
+}
+@font-face {
+    src: url(SourceSansPro-Bold.ttf);
+    font-family: 'Sans-Pro-Bold';
+}
+@font-face {
+    src: url(SegoePrint-Bold.ttf);
+    font-family: 'PrintMe';
+}

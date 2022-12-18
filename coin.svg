@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="208" width="354" style="border: none; background-color: transparent">
+    <circle r="100" cy="102.7" cx="167.7" fill="gold" stroke="black" stroke-width="4" />
+    <circle r="87" cy="95" cx="170" fill="transparent" stroke="black" stroke-width="3" />
+    <polygon fill="transparent" stroke="black" stroke-width="3" points="167,50 123,80 223,80" />
+    <polygon points="220,80 220,134 123,134 123,82" fill="transparent" stroke="black" stroke-width="3" />
+</svg>
