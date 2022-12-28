@@ -1,0 +1,54 @@
+[{
+    "name": "Joby A Carpo",
+    "age": 15,
+    "isABoy": true,
+    "hobbies": ["programming", "playing games", "doing complex math"],
+    "id": 1,
+    "knownIQ": 110,
+    "owner": true
+},
+{
+    "name": "Ana batistil",
+    "age": 13,
+    "isABoy": false,
+    "hobbies": [],
+    "id": 3,
+    "knownIQ": 42,
+    "owner": false
+},
+{
+    "name": "Mayflor Pacha",
+    "age": null,
+    "isABoy": false,
+    "hobbies": ["watching anime", "drawing anime chars", "playing pokemon"],
+    "id": 2,
+    "knownIQ": 63,
+    "owner": false
+},
+{
+    "name": "Robina Alatcha",
+    "age": 16,
+    "isABoy": false,
+    "hobbies": ["Texting to her secret crush", "punches shoulder"],
+    "id": 14,
+    "knownIQ": 63,
+    "owner": false
+},
+{
+    "name": "Joanne Munn",
+    "age": 14,
+    "isABoy": false,
+    "hobbies": "Idk :P",
+    "id": 6,
+    "knownIQ": 87,
+    "owner": false
+},
+{
+    "name": "Alexi Mae Capiral",
+    "age": 14,
+    "isABoy": false,
+    "hobbies": ["Listening to music(all kinds)", "cute"],
+    "id": [4, 5],
+    "knownIQ": "not yet",
+    "owner": false
+}]

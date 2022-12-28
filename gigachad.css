@@ -237,7 +237,7 @@ header .text:hover {
 
 .cookieNotification {
     padding: 4.5px;
-    background-color: wheat;
+    background-color: bisque;
     position: fixed;
     top: 573;
     opacity: 1;
@@ -261,14 +261,15 @@ header .text:hover {
 
 .cookieNotification cour {
     text-align: center !important;
-    font-size: 20px;
+    font-size: 23.45px;
     position: relative;
-    bottom: 12;
+    bottom: 12
+    color: white;
 }
 
 .cookieNotification .acceptBtn {
     border: 1px solid black;
-    background-color: aliceBlue;
+    background-color: lightblue;
     color: black;
     padding: 2px;
 }
@@ -294,6 +295,58 @@ header .text:hover {
     transform: scale(0, 0);
     opacity: 0;
     z-index: 998;
+}
+
+.cookiePop {
+    padding: 10px;
+    background-color: wheat;
+    border: 2px solid black;
+    position: fixed;
+    margin-left: -0.4em;
+    margin-right: -0.8em;
+    height: 434px;
+    width: 356px;
+    top: 100;
+    user-select: none;
+    opacity: 0;
+    z-index: 997;
+    overflow: scroll;
+    transform: scale(0, 0);
+}
+
+.cookiePop #parBox {
+    border: 1px solid navajowhite;
+    height: 378px;
+    padding: 16.7px;
+    border-radius: 10px;
+    overflow: scroll;
+    background-color: bisque;
+}
+
+.cookiePop #parBox #title-of-the-box {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.cookiePop #parBox q {
+    quotes: '\00AB' '\00BB' '\201E' '\201C';
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cookiePop #parBox details {
+    text-align: left;
+}
+
+.cookiePop #parBox details hr {
+    margin-left: 40px;
+    width: 170;
+    border: 0.3px solid black;
+}
+
+.cookiePop #parBox details #cookie-list {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #parBox {
@@ -327,7 +380,7 @@ header .text:hover {
 
 .gamePopUp {
     padding: 10px;
-    background: url(images/lol.gif);
+    background: url(assets/gifs/lol.gif);
     border: 2px solid black;
     position: fixed;
     margin-left: -0.7px;
@@ -499,7 +552,7 @@ header .text:hover {
         width: 300px;
     }
     body {
-        background: wheat !important;
+        background: linear-gradient(lightsteelblue 50%, #9FA8DA 50%) !important;
     }
     header {
         font-size: 25px;
@@ -517,9 +570,6 @@ header .text:hover {
     #flex-container article, #flex-container #gameDescription {
         margin-left: 3% !important;
         margin-right: 3% !important;
-    }
-    #flex-container article .barGroup #grass {
-        margin-right: 100% !important;
     }
     #game {
         height: 150px !important;
@@ -680,7 +730,7 @@ h1 {
 }
 
 .navigation-bar div > .img-nav:hover {
-    border: 1px solid black !important;
+    border: 1px solid lavender !important;
 }
 
 .bar {
@@ -946,31 +996,19 @@ cour {
 }
 
 #flex-container article .barGroup {
-    height: 35.6;
-    position: relative;
+    border: 2px solid lightsteelblue;
     left: 430px;
+    position: relative;
 }
 
 .soBright {
     filter: brightness(100%);
 }
 
-#flex-container article .barGroup hr {
-    border: 2px dashed black;
-}
-
 #flex-container article .text {
     text-decoration: underline #9FA8DA;
     text-decoration-thickness: 0.235em;
     text-decoration-skip-ink: none;
-}
-
-#flex-container article .barGroup #grass {
-    height: 34;
-    width: 325;
-    position: relative;
-    bottom: 12px;
-    border: 1px solid black;
 }
 
 @keyframes changeFrame {
@@ -1589,7 +1627,7 @@ details summary {
 }
 
 #menu {
-    background: #9FA8DA;
+    background: lightsteelblue;
     color: black;
     font-family: "GoodDog";
     border: 2px solid black;
@@ -1605,13 +1643,13 @@ details summary {
 
 @keyframes shinyObj {
     0% {
-        background: #9FA8DA;
+        background: lightsteelblue;
     }
     50% {
-        background: linear-gradient(to left, #9FA8DA, white);
+        background: linear-gradient(to left, lightsteelblue, white);
     }
     100% {
-        background: linear-gradient(to left, white, #9FA8DA);
+        background: linear-gradient(to left, white, lightsteelblue);
     }
 }
 
@@ -1621,12 +1659,6 @@ details summary {
 
 details {
     margin-bottom: 0px;
-}
-
-details hr {
-    border: 5px solid gray;
-    margin: 0px 0.1em 0px -27.1;
-    z-index: 1;
 }
 
 details:nth-child(2) li a:hover {
@@ -1716,22 +1748,16 @@ var #lang-name #lang-name2 {
 
 mark {
     display: flex;
-    background: lightgreen;
-    padding: 3px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background: lightsteelblue;
+    padding: 5px;
 }
 
 #ul-header {
-    background-image: url(images/hack2.jpg);
-    background-repeat: no-repeat;
+    background-color: black;
     padding: 2rem;
     color: white;
     margin-top: 0px;
+    border-bottom: 2px solid black;
     border-bottom: 2px solid black;
     margin-left: -1.35em;
     font-family: 'Courier New';

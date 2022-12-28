@@ -5,6 +5,7 @@
 */
 let date = new Date();
 const CurrentTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+let mainContent = document.getElementById('flex-container');
 console.log(CurrentTime);
 
 /////////////////// BRIGHTNESS OPTION ////////////////////////////////////// 
@@ -12,9 +13,16 @@ console.log(CurrentTime);
 // Set the brightness
 function setBrightness(percent) {
     const brightSite = true;
-    if (brightSite) {
-        document.getElementById('flex-container').style.filter = `brightness(${percent}%)`;
-        return changeBrightness(100);
+    let cnf;
+    if (brightSite == true) {
+        mainContent.style.filter = `brightness(${percent}%)`;
+        return cnf = changeBrightness(100);
+    } else {
+        mainContent.style.filter = `brightness(${percent}%)`;
+        if (cnf != null) {
+            cnf = undefined;
+        }
+        return changeContrast(1);
     }
     return;
 }
@@ -29,13 +37,13 @@ function changeBrightness(percent) {
         if (increase != null && increase != undefined) {
             clearInterval(increase);
         }
-        if (window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter') == 0) {
+        if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 0) {
             clearInterval(decrease);
         }
         decrease = setInterval(() => {
-            document.getElementById('flex-container').style.filter = `brightness(${(percent--)})`;
-            console.log('My filter is: ' + window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter'));
-            if (window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter') == 'brightness(0)') {
+            mainContent.style.filter = `brightness(${(percent--)})`;
+            console.log('My filter is: ' + window.getComputedStyle(mainContent).getPropertyValue('filter'));
+            if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 'brightness(0)') {
                 clearInterval(decrease);
             }
         }, 120000);
@@ -45,22 +53,36 @@ function changeBrightness(percent) {
         } else if (increase != null && increase != undefined) {
             clearInterval(increase);
         }
-        document.getElementById('flex-container').style.filter = `brightness(${percent})`;
+        mainContent.style.filter = `brightness(${percent})`;
     } else if (CurrentTime >= '13:0:00') {
         if (decrease != null && decrease != undefined) {
             clearInterval(decrease);
         }
-        if (window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter') == 200) {
+        if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 200) {
             clearInterval(increase);
         }
         increase = setInterval(() => {
-            document.getElementById('flex-container').style.filter = `brightness(${percent++})`;
-            console.log('My filter is: ' + window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter'));
-            if (window.getComputedStyle(document.getElementById('flex-container')).getPropertyValue('filter') == 'brightness(200)') {
+            mainContent.style.filter = `brightness(${percent++})`;
+            console.log('My filter is: ' + window.getComputedStyle(mainContent).getPropertyValue('filter'));
+            if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 'brightness(200)') {
                 clearInterval(increase);
             }
         }, 120000);
     }
-    return console.log(document.getElementById('flex-container').style.filter);
+    return;
 }
-///////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////
+
+const popUpDelayTime = 1300;
+const enablePopUp = true;
+
+/* if the prev option doesn't work,
+    then call this function
+*/
+// changes the colors
+function changeContrast(rgbNum) {
+    let conDecrease = setInterval(() => {
+        mainContent.style.backgroundColor = `rgba(255, 255, 255, ${(rgbNum--)})`;
+        console.log('changed');
+    }, 120000);
+}

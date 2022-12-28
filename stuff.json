@@ -1,0 +1,6 @@
+{
+    "popUp": {
+        "enabled": true, 
+        "timeDelay": 1000
+    }
+}
