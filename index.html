@@ -18,7 +18,7 @@
         
         <!-- javascript links -->
         <script src="https://kit.fontawesome.com/4cf5bb32f2.js" crossorigin="anonymous"></script>
-        <script src="javascript/cookie/cookie.js" type="text/javascript"></script>
+        <script src="javascript/cookie/cookie.js" type="module"></script>
         <script src="javascript/meim.js" type="module"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="FileSaver.js"></script>
@@ -46,84 +46,6 @@
                 }
             }
             xhr.send();
-            
-            // Before entering the website you must click confirm to enter //
-            function myConfirm(conbox = confirm) {
-                function theConbox() {
-                    if (conbox("click me")) {
-                        if (conbox("hello")) {
-                            if (conbox("congrats you entered the website!")) {
-                                return;
-                            }
-                            return;
-                        }
-                        return;
-                    }
-                    return;
-                }
-                if (theConbox()) {
-                    let consoleText = theConbox();
-                    return consoleText
-                };
-            }
-            
-            // Enter your email
-            function enterEmail(email) {
-                let enter = /\D\S+\d[^a-zA-Z]*\S+\@?gmail\S+\.?com/gi;
-                let question = "Email is";
-                let confirm = enter.test(email);
-                function emaildefined(un) {
-                    if (un == undefined) {
-                        return undefined.toString();
-                    }
-                }
-                if (confirm) {
-                    if (`${question}: ${email}`) {
-                        document.cookie = `${question}: ${email}`;
-                        console.log(document.cookie);
-                    }
-                } else {
-                    if (confirm == undefined || 5 > 0) {
-                        for (var n = 0; n < 3; n++) {
-                            question = question + emaildefined(confirm);
-                            console.error(question);
-                        }
-                    } else {
-                        return;
-                    }
-                }
-            }
-            const promptBox = prompt("Enter an email: ");
-            console.log(enterEmail(promptBox));
-            
-            // Enter your phone number
-            function phoneNumber(number, america) {
-                if (number instanceof Number || number instanceof String || number == number) {
-                    let enter = /^\+65\s\d+\S\d\s?9+1{2}/g;
-                    let confirm = enter.test(number);
-                    if (confirm) {
-                        window.navigator.vibrate(100);
-                        if (console.log(`phoneNumber: ${number}`)) {
-                            document.cookie = console.log(`phoneNumber is: ${number}`);
-                            console.log(document.cookie);
-                        }
-                    } else {
-                        console.log("Invalid phone number");
-                    }
-                } else if (america == "America") {
-                    let enter = /^\-11\s\d\d\Sd\s+@\d/g;
-                    let confirm = enter.test(number);
-                    if (confirm) {
-                        console.log(`your phone number is: ${number}`);
-                    } else {
-                        console.log("Invalid phone number");
-                    }
-                }
-                return;
-            }
-            
-            const myPhone = prompt("Enter your phone number!");
-            phoneNumber(myPhone, 'America');
         </script>
         <noscript>
             This browser doesnt support javascript tags!
@@ -191,18 +113,19 @@
                     let clickHam = document.getElementById("ham");
                     clickHam.addEventListener('click', openNav);
                     function openNav() {
+                        const navBox = document.querySelector('.popup-box');
                         if (clickHam) {
                             clickHam.removeEventListener('click', openNav);
-                            document.querySelector('.popup-box').style.opacity = 1;
-                            document.querySelector('.popup-box').style.animation = 'scaled 1 0.8s ease-in-out';
-                            document.querySelector('.popup-box').style.transform = 'scale(1.12, 1)';
+                            navBox.style.opacity = 1;
+                            navBox.style.animation = 'scaled 1 0.8s ease-in-out';
+                            navBox.style.transform = 'scale(1.12, 1)';
                             clickHam.addEventListener('click', closeNav);
                             function closeNav() {
                                 clickHam.removeEventListener('click', closeNav);
                                 clickHam.addEventListener('click', openNav);
-                                document.querySelector('.popup-box').style.opacity = 0;
-                                document.querySelector('.popup-box').style.animation = 'scaledOut 1 0.8s ease-in-out';
-                                document.querySelector('.popup-box').style.transform = 'scale(0, 0)';
+                                navBox.style.opacity = 0;
+                                navBox.style.animation = 'scaledOut 1 0.8s ease-in-out';
+                                navBox.style.transform = 'scale(0, 0)';
                             }
                         }
                     }
@@ -237,15 +160,9 @@
                     ].join(";");
                     let nav = document.querySelector(".navigation-bar");
                     
-                    document.querySelector('.navigation-bar .navSelect').addEventListener('mouseover', () => {
-                        //let musicCase = [new Audio(''), new Audio()];
-                        document.querySelector('.navigation-bar .navSelect').style.border = '1px solid black';
-                        return document.querySelector('.navigation-bar .navSelect').style.backgroundColor = '#9FA8DA';
-                    });
                     document.querySelector('.navigation-bar .navSelect').addEventListener('mouseout', () => {
                         //let musicCase = [new Audio(''), new Audio()];
-                        document.querySelector('.navigation-bar .navSelect').style.border = null;
-                        return document.querySelector('.navigation-bar .navSelect').style.backgroundColor = null;
+                        console.log('yes');
                     });
                 </script>
             </nav>
@@ -305,68 +222,72 @@
                         </div>
                         <details>
                             <h2 up id="ul-header" altline="center">
-                                <small>
+                                <small style="background-color: white; padding: 16.7px;">
                                     Table of Contents
                                 </small>
                             </h2>
                             <summary style="color: black;" altline="left">Table of Context</summary>
-                            <cour style="border: 2px solid black; background-color: white; margin-left: -26px; font-weight: bolder; font-size: 21px;">
-                                Navigate through the page
-                            </cour>
-                            <nope>
-                                <div class="list-bg">
-                                    <details>
-                                        <summary cap>header</summary>
-                                        <li>
-                                            <a href="#intro">Introduction</a>
-                                        </li>
-                                    </details><br>
-                                    <details>
-                                        <summary cap>body</summary>
-                                        <li>
-                                            <a href="#intro1">Why Did You Learn Coding?</a>
-                                        </li>
-                                        <li>
-                                            <a href"#intro2">
-                                                How did you learn programming?
-                                            </a>
-                                        </li>
-                                    </details><br>
-                                    <details>
-                                        <summary cap>footer</summary>
-                                        <li>
-                                            <a href="#footer">
-                                                The end.
-                                            </a>
-                                        </li>
-                                    </details>
-                                </div>
-                            </nope><br>
-                            <cour id="tag2" style="border: 2px solid black; background-color: white; margin-left: -26px; font-weight: bolder; font-size: 21px;">
-                                Extras
-                            </cour>
-                            <nope>
-                                <div class="list-bg">
-                                    <details style="overflow: scroll;">
-                                        <summary cap>The game</summary>
-                                        <hr style="border: 2px solid black; margin-bottom: 5px;" />
-                                        <li style="background-color: navajowhite;">
-                                            <a href="#intro3">
-                                                splint
-                                            </a>
-                                        </li><br>
-                                        <details style="margin-left: 12%;">
-                                            <summary cap>play!!!</summary>
-                                            <hr style="margin-left: 1%; border: 2px solid black; margin-bottom: 5px;">
-                                            <li style="background-color: navajowhite;">
-                                                <a href="#intro4">
-                                                    test
+                            <details>
+                                <summary style="padding: 5px; border: 2px solid black; background-color: white; margin-left: -26px; font-weight: bolder; font-size: 15px;">
+                                    Navigate through the page
+                                </summary>
+                                <nope>
+                                    <div class="list-bg">
+                                        <details>
+                                            <summary cap>header</summary>
+                                            <li>
+                                                <a href="#intro">Introduction</a>
+                                            </li>
+                                        </details><br>
+                                        <details>
+                                            <summary cap>body</summary>
+                                            <li>
+                                                <a href="#intro1">Why Did You Learn Coding?</a>
+                                            </li>
+                                            <li>
+                                                <a href"#intro2">
+                                                    How did you learn programming?
+                                                </a>
+                                            </li>
+                                        </details><br>
+                                        <details>
+                                            <summary cap>footer</summary>
+                                            <li>
+                                                <a href="#footer">
+                                                    The end.
                                                 </a>
                                             </li>
                                         </details>
-                                    </details>
-                                </div>
-                            </nope>
+                                    </div>
+                                </nope>
+                            </details><br>
+                            <details>
+                                <summary id="tag2" style="padding: 5px; border: 2px solid black; background-color: white; margin-left: -26px; font-weight: bolder; font-size: 15px;">
+                                    Extras
+                                </summary>
+                                <nope>
+                                    <div class="list-bg">
+                                        <details style="overflow: scroll;">
+                                            <summary cap>The game</summary>
+                                            <hr style="border: 2px solid black; margin-bottom: 5px;" />
+                                            <li style="background-color: navajowhite;">
+                                                <a href="#intro3">
+                                                    splint
+                                                </a>
+                                            </li><br>
+                                            <details style="margin-left: 12%;">
+                                                <summary cap>play!!!</summary>
+                                                <hr style="margin-left: 1%; border: 2px solid black; margin-bottom: 5px;">
+                                                <li style="background-color: navajowhite;">
+                                                    <a href="#intro4">
+                                                        test
+                                                    </a>
+                                                </li>
+                                            </details>
+                                        </details>
+                                    </div>
+                                </nope>
+                            </details>
                         </details>
                     </div>
                 </nav>
@@ -555,6 +476,12 @@
                         </div>
                         <dog id="dog-flex">~The game~</dog>
                         <hr style="border: 2px dashed black">
+                        <!--<div id="gameContainer">
+                            <div id="game2">
+                                
+                            </div>
+                        </div>-->
+                        <br>
                         <dog id="dog-flex">if you want to find more information, drag the settings and scoreboard</dog>
                         <!--<br>
                         <div id="game2">

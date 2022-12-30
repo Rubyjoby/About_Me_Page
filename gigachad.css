@@ -6,8 +6,17 @@ body {
     -webkit-tap-highlight-color: #00FFFD;
 }
 
+/* This is where all global scopes/variables go */
+:root {
+    --courier-font: 'Courier New';
+    --glass: transparent;
+    --Flexed: flex;
+    --centered-Text: center;
+    --Classic-padding: 5px;
+}
+
 .svgMe {
-    background-color: transparent;
+    background-color: var(--glass);
 }
 
 #footer {
@@ -19,7 +28,7 @@ body {
     margin-right: -7.9px;
     margin-left: -7.9px;
     margin-bottom: -7.9px;
-    display: flex;
+    display: var(--Flexed);
     border-top: 3.5px solid black;
 }
 
@@ -96,7 +105,7 @@ marker {
 
 #social-medias {
     max-height: 4.59375rem;
-    background: transparent;
+    background: var(--glass);
     margin-left: -2.1rem;
 }
 
@@ -160,7 +169,7 @@ header .text:hover {
     background-color: #FFE389;
     border: 2px solid black;
     padding: 5px;
-    text-align: center;
+    text-align: var(--centered-Text);
 }
 
 .popup-box {
@@ -181,14 +190,14 @@ header .text:hover {
 }
 
 [alt="busted code:("] {
-    font-family: 'Courier New';
+    font-family: var(--courier-font);
     font-family: bolder;
 }
 
 .popup-box #firstView {
     position: relative;
     right: 0;
-    display: flex;
+    display: var(--Flexed);
     flex-direction: row;
     align-content: center;
     justify-content: center;
@@ -224,9 +233,9 @@ header .text:hover {
     color: gold;
 } 
 
-.popup-box h2, .popup-box div h3 {
-    text-align: center;
-    font-family: Courier New;
+.popup-box h2 {
+    text-align: var(--centered-Text);
+    font-family: var(--courier-font);
 }
 
 .popup-box div #jumper {
@@ -260,7 +269,7 @@ header .text:hover {
 }
 
 .cookieNotification cour {
-    text-align: center !important;
+    text-align: var(--centered-Text) !important;
     font-size: 23.45px;
     position: relative;
     bottom: 12
@@ -350,8 +359,8 @@ header .text:hover {
 }
 
 #parBox {
-    text-align: center;
-    font-family: 'Courier New';
+    text-align: var(--centered-Text);
+    font-family: var(--courier-font);
     font-weight: bolder;
     height: 100;
 }
@@ -438,7 +447,7 @@ header .text:hover {
 }
 
 .gamePopUp #parBox #table {
-    background-color: transparent;
+    background-color: var(--glass);
     padding-left: 2px;
 }
 
@@ -531,7 +540,7 @@ header .text:hover {
         background: crimson;
     }
     #footer {
-        text-align: center !important;
+        text-align: var(--centered-Text) !important;
         padding: 10px !important;
         border-radius: 0px !important;
         font-size: 23px;
@@ -600,12 +609,7 @@ header .text:hover {
         margin-top: 12px !important;
     }
     nope .list-bg :is(details) {
-        text-align: center;
-    }
-    nope .list-bg :is(li) {
-        padding-block: 12px 12px !important;
-        width: 36.9em;
-        border: 1px solid black;
+        text-align: var(--centered-Text);
     }
     #flex-container {
         margin-right: 5%;
@@ -733,6 +737,64 @@ h1 {
     border: 1px solid lavender !important;
 }
 
+.navigation-bar .navSelect {
+    background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
+}
+
+.navigation-bar .navSelect:hover {
+    animation: 1s theBox 1 ease forwards;
+}
+
+@keyframes theBox {
+    0% {
+        background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
+    }
+    10% {
+        background: linear-gradient(to right, lavender 10%, var(--glass) 10%);
+    }
+    25% {
+        background: linear-gradient(to right, lavender 25%, var(--glass) 25%);
+    }
+    45% {
+        background: linear-gradient(to right, lavender 45%, var(--glass) 45%);
+    }
+    60% {
+        background: linear-gradient(to right, lavender 60%, var(--glass) 60%);
+    }
+    81% {
+        background: linear-gradient(to right, lavender 81%, var(--glass) 81%);
+    }
+    100% {
+        background: linear-gradient(to right, lavender 100%, var(--glass) 0%);
+        border: 1px solid black;
+    }
+}
+
+@keyframes reverseTheBox {
+    0% {
+        background: linear-gradient(to right, lavender 100%, var(--glass) 0%);
+    }
+    10% {
+        background: linear-gradient(to right, lavender 81%, var(--glass) 81%);
+    }
+    25% {
+        background: linear-gradient(to right, lavender 60%, var(--glass) 60%);
+    }
+    45% {
+        background: linear-gradient(to right, lavender 45%, var(--glass) 45%);
+    }
+    60% {
+        background: linear-gradient(to right, lavender 25%, var(--glass) 25%);
+    }
+    81% {
+        background: linear-gradient(to right, lavender 10%, var(--glass) 10%);
+    }
+    100% {
+        background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
+        border: none;
+    }
+}
+
 .bar {
     border: 2px solid lavender;
 }
@@ -821,11 +883,11 @@ h1 {
 }
 
 .ScoreBoard #gameResults {
-    background-color: transparent;
+    background-color: var(--glass);
     border-right: 3px solid black;
     width: 50%;
     border-bottom: 3px solid black;
-    border-left: 0px solid transparent;
+    border-left: 0px solid var(--glass);
     height: 100px;
     overflow: scroll;
 }
@@ -838,13 +900,13 @@ h1 {
     width: 163.5px;
     height: 100px;
     padding: 5px;
-    text-align: center;
+    text-align: var(--centered-Text);
     border-bottom: 3px solid black;
     overflow: scroll;
 }
 
 [placeholder] {
-    text-align: center;
+    text-align: var(--centered-Text);
 }
 
 [altline] {
@@ -852,7 +914,7 @@ h1 {
 }
 
 [altline=center] {
-    text-align: center;
+    text-align: var(--centered-Text);
 }
 
 [altline=left] {
@@ -942,7 +1004,7 @@ cour {
 }
 
 #flex-container {
-    display: flex;
+    display: var(--Flexed);
     background-color: white;
     overflow: hidden;
     border: 2px solid black;
@@ -974,7 +1036,7 @@ cour {
 }
 
 #flex-container article div #my-img {
-    display: flex;
+    display: var(--Flexed);
     margin-left: 50%;
     border-radius: 50%;
     margin-top: -2rem;
@@ -992,7 +1054,7 @@ cour {
 
 #flex-container article s {
     color: red;
-    display: flex;
+    display: var(--Flexed);
 }
 
 #flex-container article .barGroup {
@@ -1458,7 +1520,7 @@ cour {
 }
 
 #flex-container a[title=freefoodcamp] {
-    display: flex;
+    display: var(--Flexed);
     background-color: white;
     border: 2px solid chocolate;
     margin-left: 15%;
@@ -1470,7 +1532,7 @@ a {
 }
 
 a:hover a:active:not(img) {
-    background-color: transparent;
+    background-color: var(--glass);
     border: 1px solid steelblue;
     border-radius: 50%;
     padding: 3px;
@@ -1493,10 +1555,11 @@ a img:hover {
     background: linear-gradient(to left, snow, lightsteelblue);
     padding: 16.7px;
     width: 322;
+    width: -webkit-fill-available;
     border: 2.3px solid black;
     text-align: center;
     color: black;
-    font-family: 'Courier New';
+    font-family: var(--courier-font);
     position: relative;
     left: 430px;
     user-select: none;
@@ -1538,7 +1601,7 @@ a img:hover {
 }
 
 #dog-flex {
-    display: flex;
+    display: var(--Flexed);
     text-transform: capitalize;
 }
 
@@ -1596,7 +1659,7 @@ nope li {
     padding-block: 10px 10px;
 }
 
-nope li:hover nope li:focus {
+nope li:hover, nope li:focus {
     background-image: url(https://media4.giphy.com/media/9lAR6gmuKyje0TVLsD/giphy-downsized-large.gif);
     background-size: cover;
     animation-delay: 1.5s;
@@ -1609,17 +1672,22 @@ nope li a {
 }
 
 nope .list-bg details li {
-    background-color: ivory;
+    background-color: yellow;
     border: 2px solid black;
 }
 
-details summary {
+details > summary {
     font-family: 'Courier New';
     font-weight: bolder;
+    list-style-type: '> ';
+}
+
+details[open] > summary {
+    list-style-type: '< ';
 }
 
 #php {
-    display: flex;
+    display: var(--Flexed);
     margin-left: 14em;
     margin-top: -3.1rem;
     height: 78;
@@ -1700,19 +1768,19 @@ var #lang-name #lang-name2 {
 }
 
 #htmlp {
-    display: flex;
+    display: var(--Flexed);
     height: 78;
     width: 80;
 }
 
 #cssp {
-    display: flex;
+    display: var(--Flexed);
     margin-left: 4.2em;
     margin-top: -3.7rem;
 }
 
 #jsp {
-    display: flex;
+    display: var(--Flexed);
     margin-left: 9em;
     margin-top: -4.5rem;
 }
@@ -1734,7 +1802,7 @@ var #lang-name #lang-name2 {
 }
 
 #my-img {
-    display: flex;
+    display: var(--Flexed);
     margin-left: 50%;
     border-radius: 50%;
     margin-top: -2rem;
@@ -1747,18 +1815,18 @@ var #lang-name #lang-name2 {
 }
 
 mark {
-    display: flex;
+    display: var(--Flexed);
     background: lightsteelblue;
     padding: 5px;
 }
 
 #ul-header {
-    background-color: black;
+    background: black;
     padding: 2rem;
-    color: white;
+    color: black;
     margin-top: 0px;
     border-bottom: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid black;
     margin-left: -1.35em;
     font-family: 'Courier New';
 }

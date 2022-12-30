@@ -133,7 +133,7 @@ function startTheTouch() {
                             document.getElementById('card-background').style.border = '3px solid white';
                             document.querySelector('#card-background > cour').style.color = `${(functionClass.Extra.colorVal = 'black')}`; //'black';
                             wholeContainer.removeEventListener((functionClass.Assets.listeners[2]), () => {}, 500);
-                            forestSfx.play();
+                            //forestSfx.play();
                             
                             if (webScrollContain > 245 && (parseInt(window.getComputedStyle(secondIntro).getPropertyValue('left'))) == 0) {
                                 document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation;
@@ -190,7 +190,7 @@ function startTheTouch() {
                         } else {
                             if (window.getComputedStyle(secondIntro).getPropertyValue('animation') != null) {
                                 secondIntro.style.animation = functionClass.Assets.Animations.animation01;
-                                wholeContainer.style.animation = functionClass.Extra.values[2];
+                                //wholeContainer.style.animation = functionClass.Extra.values[2];
                                 document.getElementById('card-background').style.border = '3px solid black';
                                 forestSfx.pause();
                                 (functionClass.Assets.hrElem.Ids.firstId.id).style.border = '2px solid black';
