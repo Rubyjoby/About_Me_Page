@@ -738,7 +738,7 @@ h1 {
 }
 
 .navigation-bar .navSelect {
-    background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
+    background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
 }
 
 .navigation-bar .navSelect:hover {
@@ -747,51 +747,50 @@ h1 {
 
 @keyframes theBox {
     0% {
-        background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
+        background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
     }
     10% {
-        background: linear-gradient(to right, lavender 10%, var(--glass) 10%);
+        background: linear-gradient(to bottom, lavender 10%, var(--glass) 10%);
     }
     25% {
-        background: linear-gradient(to right, lavender 25%, var(--glass) 25%);
+        background: linear-gradient(to bottom, lavender 25%, var(--glass) 25%);
     }
     45% {
-        background: linear-gradient(to right, lavender 45%, var(--glass) 45%);
+        background: linear-gradient(to bottom, lavender 45%, var(--glass) 45%);
     }
     60% {
-        background: linear-gradient(to right, lavender 60%, var(--glass) 60%);
+        background: linear-gradient(to bottom, lavender 60%, var(--glass) 60%);
     }
     81% {
-        background: linear-gradient(to right, lavender 81%, var(--glass) 81%);
+        background: linear-gradient(to bottom, lavender 81%, var(--glass) 81%);
     }
     100% {
-        background: linear-gradient(to right, lavender 100%, var(--glass) 0%);
-        border: 1px solid black;
+        background: linear-gradient(to bottom, lavender 100%, var(--glass) 0%);
+        /*box-shadow: ;*/
     }
 }
 
 @keyframes reverseTheBox {
     0% {
-        background: linear-gradient(to right, lavender 100%, var(--glass) 0%);
+        background: linear-gradient(to bottom, lavender 100%, var(--glass) 0%);
     }
     10% {
-        background: linear-gradient(to right, lavender 81%, var(--glass) 81%);
+        background: linear-gradient(to bottom, lavender 81%, var(--glass) 81%);
     }
     25% {
-        background: linear-gradient(to right, lavender 60%, var(--glass) 60%);
+        background: linear-gradient(to bottom, lavender 60%, var(--glass) 60%);
     }
     45% {
-        background: linear-gradient(to right, lavender 45%, var(--glass) 45%);
+        background: linear-gradient(to bottom, lavender 45%, var(--glass) 45%);
     }
     60% {
-        background: linear-gradient(to right, lavender 25%, var(--glass) 25%);
+        background: linear-gradient(to bottom, lavender 25%, var(--glass) 25%);
     }
     81% {
-        background: linear-gradient(to right, lavender 10%, var(--glass) 10%);
+        background: linear-gradient(to bottom, lavender 10%, var(--glass) 10%);
     }
     100% {
-        background: linear-gradient(to right, lavender 0%, var(--glass) 0%);
-        border: none;
+        background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
     }
 }
 
@@ -1015,6 +1014,14 @@ cour {
     justify-content: flex-start;
     writing-mode: horizontal-tb;
     padding-block: 15px 15px;
+}
+
+.fire {
+    height: 50;
+    width: 50;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 #flex-container b {
@@ -1596,7 +1603,7 @@ a img:hover {
         left: 430px;
     }
     to {
-        left: 0px;
+        left: 0;
     }
 }
 
@@ -1812,6 +1819,8 @@ var #lang-name #lang-name2 {
 #card-background {
     background: linear-gradient(to left, white, lightsteelblue);
     border: 3px solid black;
+    /*position: relative;
+    left: 430px;*/
 }
 
 mark {

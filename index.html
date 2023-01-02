@@ -22,31 +22,13 @@
         <script src="javascript/meim.js" type="module"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="FileSaver.js"></script>
+        <script src="javascript/mod.js"></script>
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
         <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script>
-            // testing the request
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST', 'javascript/classmates.json', true);
-            // Check the request
-            xhr.onload = function () {
-                if (this.status == 200) {
-                    //console.log(this.responseText);
-                    let cls = JSON.parse(this.responseText);
-                    for (var t in cls) {
-                        console.log('name: ', cls[t].name);
-                        console.log('age: ', cls[t].age);
-                        console.log('isABoy: ', cls[t].isABoy);
-                        console.log('hobbies: ', cls[t].hobbies);
-                        console.log('id: ', cls.id);
-                        console.log('iq: ', cls[t].knownIQ);
-                        console.log('owner: ', cls[t].owner);
-                    }
-                }
-            }
-            xhr.send();
-        </script>
+        <script src="https://cdn.rawgit.com/jprichardson/string.js/master/dist/string.min.js"></script>
+        <script src="javascript/jsonCalls.js"></script>
         <noscript>
             This browser doesnt support javascript tags!
         </noscript>
@@ -74,7 +56,7 @@
             }
         </script>
         <!-- navigate through other stuff -->
-        <div>
+        <div
             <nav class="navigation-bar">
                 <div>
                     <img title="home" src="images/nav/acc.jpg" alt="no-icon" class="img-nav" tabindex="1" />
@@ -308,7 +290,7 @@
                             <hr class="barGroup"><br>
                             <dog id="dog-flex">°°°°°°°°°°°°°°°°°°°°°°My face reveal (kinda)°°°°°°°°°°°°°°</dog>
                             <hr class="barGroup second"><br>
-                            <div id="card-background">
+                            <div id="card-background" style="position: relative; left: 430px;">
                                 <cour id="dog-flex" style="font-size: 14px; font-weight: bold;">This is me btw &#x2192;</cour>
                                 <img id="my-img" height="78" width="78" src="images/leme.jpg" alt="noooo:(" spellcheck="false" title="me" />
                             </div>
@@ -332,7 +314,7 @@
                             <!-- All the languages i learned -->
                             <dog id="dog-flex">~programming languages~</dog>
                             <hr style="border: 2px dashed black;" class="dashed">
-                            <div id="languagebox">
+                            <!--<div id="languagebox">
                                 <dog id="dog-flex" style="background-color: black; color: white; padding: 5px;">Here are the four languages i'm trying to learn:
                                 </dog><br>
                                 <img src="images/html.png" alt="html-errored" id="htmlp" />
@@ -341,7 +323,7 @@
                                 <img src="images/php.png" height="50" width="50" alt="php" id="php" />
                                 <br>
                                 <dog style="font-size: 12px; margin-left: 1.5em;">html <var id="lang-name">css</var> <var id="lang-name2">javascript</var> <var id="lang-name3">php</var></dog>
-                            </div>
+                            </div>-->
                             <br>
                             <dog id="dog-flex">The first two languages i know, while still knowing javascript and php at the same time.</dog><br>
                             <dog id="dog-flex">~Email me for more ideas 😎~</dog>
@@ -593,14 +575,10 @@
                         </div>
                         <hr style="border: 2px solid black;" />
                         <br>
-                        <dog id="dog-flex">Although it's still in beta, you can still play it!</dog>
-                        <!--<div id="bigCirc">
-                            <div id="smallCirc">
-                                <div id="evenSmallerCirc">
-                                    <cour>hello</cour>
-                                </div>
-                            </div>
-                        </div>-->
+                        <dog beta id="dog-flex">Although it's still in beta, you can still play it!</dog><br>
+                        <div class="touch">
+                            <!--<img height="45" width="45" src="assets/gifs/elmoFire.gif" />-->
+                        </div>
                         <script src="javascript/typewriteHtml.js" type="module"></script>
                         <script src="javascript/config.js" type="module"></script>
                         <script>
