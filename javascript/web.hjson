@@ -1,0 +1,11 @@
+{
+    # top
+    name: informy
+    version: 0.01
+    filePath: "/file/home/"
+    fileName: index.html
+    isDarkMode: false
+    zommable: false
+    ''' pages '''
+    
+}

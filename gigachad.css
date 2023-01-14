@@ -202,7 +202,7 @@ header .text:hover {
     align-content: center;
     justify-content: center;
     overflow: hidden;
-    animation: frameMoveLeft 1 0.65s ease;
+    animation: 1 1s frameMoveLeft linear;
 }
 
 @keyframes frameMoveLeft {
@@ -210,7 +210,7 @@ header .text:hover {
         right: 0;
     }
     to {
-        right: 400;
+        right: 500;
     }
 }
 
@@ -222,8 +222,9 @@ header .text:hover {
 
 .popup-box #firstView #con2 input {
     border: 1px solid black;
+    border-bottom: none;
     background-color: aliceBlue;
-    width: 172;
+    width: 180;
     font-family: 'Courier New';
     color: black;
 }
@@ -290,6 +291,44 @@ header .text:hover {
     padding: 2px;
 }
 
+.textPop {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    top: -20;
+    background: linear-gradient(to right, wheat 50%, lavenderblush 50%);
+    height: 45;
+    width: 300;
+    left: 23;
+    border: 1px solid black;
+    padding: 1.2rem;
+    opacity: 1;
+}
+
+@keyframes txtPopUp {
+    from {
+        top: -20;
+    }
+    to {
+        top: 345;
+    }
+}
+
+@keyframes txtPopUpRev {
+    from {
+        top: 345;
+    }
+    to {
+        top: 800;
+    }
+}
+
+.textPop > cour {
+    font-size: 12px;
+    color: black;
+}
+
 .popup-box2 {
     padding: 10px;
     background: white;
@@ -308,7 +347,7 @@ header .text:hover {
 
 .cookiePop {
     padding: 10px;
-    background-color: wheat;
+    background-color: lightsteelblue;
     border: 2px solid black;
     position: fixed;
     margin-left: -0.4em;
@@ -329,7 +368,18 @@ header .text:hover {
     padding: 16.7px;
     border-radius: 10px;
     overflow: scroll;
-    background-color: bisque;
+    background-color: snow;
+}
+
+.cookiePop #parBox img {
+    height: 20;
+    width: 20;
+}
+
+.cookiePop #parBox #cons a {
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: lightsteelblue;
 }
 
 .cookiePop #parBox #title-of-the-box {
@@ -518,11 +568,17 @@ header .text:hover {
     font-style: italic;
 }
 
+.popup-box #mainpoint img {
+    height: 51;
+    width: 51;
+    margin-bottom: 1.2em;
+}
+
 .popup-box #mainpoint {
     height: 100;
     overflow: scroll;
     border: 1.3px solid black;
-    background: #9FA8DA;
+    background: white;
     padding: 15px 8px 15px 8px;
 }
 
@@ -649,6 +705,7 @@ header .text:hover {
         max-height: 3.8rem !important;
         width: 44.74375rem !important;
         height: 10rem !important;
+        border: 2px solid black !important;
     }
     #card-background {
         background-color: black !important;
@@ -690,6 +747,14 @@ header .text:hover {
     }
     h1 {
         webkit-text-stroke: black 2px;
+    }
+    .cookieNotification {
+        overflow: hidden !important;
+        top: 50 !important;
+        height: 65 !important;
+        border-left: none !important;
+        border-bottom: 2px solid black !important;
+        width: 44.74375rem !important;
     }
 }
 h1 {
@@ -738,59 +803,100 @@ h1 {
 }
 
 .navigation-bar .navSelect {
-    background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
+    background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
 }
 
 .navigation-bar .navSelect:hover {
     animation: 1s theBox 1 ease forwards;
 }
 
-@keyframes theBox {
+.popup-box #firstView #con2 #mainpoint .navSelect {
+    background: linear-gradient(to bottom, lightgreen 0%, var(--glass) 0%);
+}
+
+.popup-box #firstView #con2 #mainpoint .navSelect:hover {
+    animation: 1s theBox2 1 ease forwards;
+}
+
+@keyframes theBox2 {
     0% {
-        background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
+        background: linear-gradient(to bottom, lightgreen 0%, var(--glass) 0%);
     }
     10% {
-        background: linear-gradient(to bottom, lavender 10%, var(--glass) 10%);
+        background: linear-gradient(to bottom, lightgreen 10%, var(--glass) 10%);
     }
     25% {
-        background: linear-gradient(to bottom, lavender 25%, var(--glass) 25%);
+        background: linear-gradient(to bottom, lightgreen 25%, var(--glass) 25%);
     }
     45% {
-        background: linear-gradient(to bottom, lavender 45%, var(--glass) 45%);
+        background: linear-gradient(to bottom, lightgreen 45%, var(--glass) 45%);
     }
     60% {
-        background: linear-gradient(to bottom, lavender 60%, var(--glass) 60%);
+        background: linear-gradient(to bottom, lightgreen 60%, var(--glass) 60%);
     }
     81% {
-        background: linear-gradient(to bottom, lavender 81%, var(--glass) 81%);
+        background: linear-gradient(to bottom, lightgreen 81%, var(--glass) 81%);
     }
     100% {
-        background: linear-gradient(to bottom, lavender 100%, var(--glass) 0%);
-        /*box-shadow: ;*/
+        background: linear-gradient(to bottom, lightgreen 100%, var(--glass) 0%);
+        /*box-shadow: 0 0 25px gray, 0 0 25px silver, 0 0 50px green;*/
+        border-bottom: 2px solid black;
+        padding: 5px;
+    }
+}
+
+@keyframes theBox {
+    0% {
+        background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
+    }
+    10% {
+        background: linear-gradient(to bottom, lightyellow 10%, var(--glass) 10%);
+        border-bottom: 0.6px solid black;
+    }
+    25% {
+        background: linear-gradient(to bottom, lightyellow 25%, var(--glass) 25%);
+        border-bottom: 0.967px solid black;
+    }
+    45% {
+        background: linear-gradient(to bottom, lightyellow 45%, var(--glass) 45%);
+        border-bottom: 1.1px solid black;
+    }
+    60% {
+        background: linear-gradient(to bottom, lightyellow 60%, var(--glass) 60%);
+        border-bottom: 1.698px solid black;
+    }
+    81% {
+        background: linear-gradient(to bottom, lightyellow 81%, var(--glass) 81%);
+        border-bottom: 1.9px solid black;
+    }
+    100% {
+        background: linear-gradient(to bottom, lightyellow 100%, var(--glass) 0%);
+        box-shadow: 0 0 25px lavenderBlush, 0 0 25px snow, 0 0 50px white;
+        border-bottom: 2px solid black;
     }
 }
 
 @keyframes reverseTheBox {
     0% {
-        background: linear-gradient(to bottom, lavender 100%, var(--glass) 0%);
+        background: linear-gradient(to bottom, lightyellow 100%, var(--glass) 0%);
     }
     10% {
-        background: linear-gradient(to bottom, lavender 81%, var(--glass) 81%);
+        background: linear-gradient(to bottom, lightyellow 81%, var(--glass) 81%);
     }
     25% {
-        background: linear-gradient(to bottom, lavender 60%, var(--glass) 60%);
+        background: linear-gradient(to bottom, lightyellow 60%, var(--glass) 60%);
     }
     45% {
-        background: linear-gradient(to bottom, lavender 45%, var(--glass) 45%);
+        background: linear-gradient(to bottom, lightyellow 45%, var(--glass) 45%);
     }
     60% {
-        background: linear-gradient(to bottom, lavender 25%, var(--glass) 25%);
+        background: linear-gradient(to bottom, lightyellow 25%, var(--glass) 25%);
     }
     81% {
-        background: linear-gradient(to bottom, lavender 10%, var(--glass) 10%);
+        background: linear-gradient(to bottom, lightyellow 10%, var(--glass) 10%);
     }
     100% {
-        background: linear-gradient(to bottom, lavender 0%, var(--glass) 0%);
+        background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
     }
 }
 
@@ -1560,16 +1666,21 @@ a img:hover {
     font-size: 1.5em;
     margin-bottom: 10px;
     background: linear-gradient(to left, snow, lightsteelblue);
-    padding: 16.7px;
+    padding: 18px;
     width: 322;
     width: -webkit-fill-available;
     border: 2.3px solid black;
     text-align: center;
     color: black;
-    font-family: var(--courier-font);
+    font-family: var(--courier-font), cursive, monospace, 'Segoe UI';
     position: relative;
     left: 430px;
     user-select: none;
+}
+
+.dot2, .dot3, .dot4, .dot5 {
+    position: relative;
+    left: 430px;
 }
 
 .disappeared {
@@ -1662,7 +1773,6 @@ nope li {
     border-radius: 0%;
     height: 83px;
     width: 17.3em;
-    text-decoration-line: underline;
     padding-block: 10px 10px;
 }
 
@@ -1816,12 +1926,10 @@ var #lang-name #lang-name2 {
     border: 3px solid black;
 }
 
-#card-background {
+/*#card-background {
     background: linear-gradient(to left, white, lightsteelblue);
     border: 3px solid black;
-    /*position: relative;
-    left: 430px;*/
-}
+}*/
 
 mark {
     display: var(--Flexed);

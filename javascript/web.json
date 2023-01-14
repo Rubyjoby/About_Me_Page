@@ -1,0 +1,53 @@
+[
+    {
+        "name": "informy",
+        "version": 0.01,
+        "filePath": "/file/home/",
+        "fileName": "index.html",
+        "activateDateMode": false,
+        "zommable": false,
+        // the first page
+        "Page1": {
+            "name": "informy",
+            "version": 1,
+            "filePath": "/file/home/",
+            "fileName": "index.html",
+            "activateDateMode": false,
+            "zommable": false,
+            "dateCreated": "12/15/21"
+        },
+        // Extra data
+        "socialMedias": [
+            {
+                "Github": {
+                    "Profile": {
+                        "name": "Rubyjoby",
+                        "bio": "he who defines himself is he",
+                        "link": "https://github.com/Rubyjoby",
+                        "isASenior": false
+                    },
+                    "About_Me_Page": {
+                        "TotalFiles": 100,
+                        "lastGitCommit": {
+                            "date": "2 days ago",
+                            "num": "213be43"
+                        },
+                        "Repolink": "https://github.com/Rubyjoby/About_Me_Page",
+                        "type": "git",
+                        "cloneLink": {
+                            "http": "https://github.com/Rubyjoby/About_Me_Page.git",
+                            "SSH": "git@github.com:Rubyjoby/About_Me_Page.git",
+                            "gitCli": "gh repo clone Rubyjoby/About_Me_Page"
+                        }
+                    },
+                    "isDarkMode": true
+                },
+                "Facebook": "Joby Carpo",
+                "discord": {
+                    "name": "Oryx",
+                    "id": 5149
+                }
+            }
+        ]
+    }
+]

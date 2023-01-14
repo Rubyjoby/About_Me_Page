@@ -18,6 +18,18 @@ let [
         fifthZero
     ] = intros;
 const subT = document.querySelector('.subTitles');
+const subTAll = document.getElementsByClassName('.subTitles');
+let [
+        secondDot,
+        thirdDot,
+        fourthDot,
+        fifthDot
+    ] = [
+    document.querySelector('.dot2'),
+    document.querySelector('.dot3'),
+    document.querySelector('.dot4'),
+    document.querySelector('.dot5')
+];
 let [
         Optimize,
         Optimize2,
@@ -37,6 +49,9 @@ let webScrollContain;
 let forestSfx = new Audio('assets/music/Forest - Ambient Sound Effects (192K).mp3');
 let forestBg = 'url(assets/gifs/UncomfortableWelllitDrever-size_restricted.gif)';
 let fireSfx = new Audio('assets/sfx/fire.mp3');
+////////////////
+
+// load the browser
 window.addEventListener('load', startTheTouch);
 
 
@@ -85,6 +100,38 @@ function startTheTouch() {
     if (functionClass.Assets.Animations.changeAnimation === false) {
         Object.freeze(functionClass.Assets.Animations);
     }
+
+    // Check if an intro is on a certain position
+    const linked = function (nums, intArr, propVal) {
+        if (document.querySelector('div #menu div details').hasAttribute('open')) {
+            // put the words in an array
+            let slicedArr = [];
+            slicedArr.push(intArr.slice(0, 2));
+            let linkedwords = [];
+            
+            // loop through the array
+            for (var f in (intArr)) {
+                linkedwords.push(intArr[f]);
+            }
+            
+            // if the
+            if (propVal != nums[0]) {
+                document.querySelector('.list-bg [href="#intro"]').innerHTML = '';
+            } else if (propVal == nums[0]) {
+                document.querySelector('.list-bg [href="#intro"]').innerHTML = 'Me'; //linkedwords.splice(0, 1);
+                console.log(linkedwords);
+            }
+            return;// linkedwords[(1 + 1)];
+        } else {
+            /*setTimeout(() => {
+                return linked([functionClass.Extra.values[0], 1], intros);
+            }, 2000);*/
+            console.log('yes');
+        }
+        return;
+    };
+    // call the function
+    linked([functionClass.Extra.values[0], 1], intros, parseInt(window.getComputedStyle(firstIntro).getPropertyValue('left')));
     
     // keep track of the scroll
     window.addEventListener((functionClass.Assets.listeners[4]), (event) => {
@@ -134,6 +181,7 @@ function startTheTouch() {
     if (!wholeContainer.hasAttribute('onscroll')) {
         wholeContainer.addEventListener((functionClass.Assets.listeners[1]), (event) => {
             let Card = document.getElementById('card-background');
+            let divvedBar = document.querySelector('.barGroup');
             /*[...event.changedTouches].forEach((touch) => {
                 let touchIcn = document.querySelector('.touch');
                 let fireImg = document.createElement('img');
@@ -158,107 +206,124 @@ function startTheTouch() {
                 subT.style.animation = functionClass.Assets.Animations.animation;
                 subT.style.left = functionClass.Extra.values[0];
                 if (parseInt(window.getComputedStyle(subT).getPropertyValue('left')) == functionClass.Extra.values[0]) {
-                    document.querySelector('.barGroup').style.animation = functionClass.Assets.Animations.animation;
-                    document.querySelector('.barGroup').style.left = functionClass.Extra.values[0];
+                    divvedBar.style.animation = functionClass.Assets.Animations.animation;
+                    divvedBar.style.left = functionClass.Extra.values[0];
                     if (webScrollContain > 64.5) {
-                        document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation;
-                        document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[0];
-                        if (webScrollContain > 65.7 && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
-                            Card.style.animation = functionClass.Assets.Animations.animation;
-                            Card.style.left = functionClass.Extra.values[0];
-                            if (webScrollContain > 239.5) {
-                                wholeContainer.style.animation = '1 0.6s changeFrame ease-in';
-                                wholeContainer.style.backgroundColor = functionClass.Extra.values[2];
-                                wholeContainer.style.backgroundImage = forestBg;
-                                wholeContainer.style.color = functionClass.Assets.hrElem.Border.borderColors.c1;
-                                secondIntro.style.animation = functionClass.Assets.Animations.animation;
-                                secondIntro.style.left = functionClass.Extra.values[0];
-                                firstIntro.style.border = `${functionClass.Assets.hrElem.Border.num}.3px ${functionClass.Assets.hrElem.Border.borderType.normal} ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
-                                secondIntro.style.border = `${functionClass.Assets.hrElem.Border.num}.3px ${functionClass.Assets.hrElem.Border.borderType.normal} ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
-                                (functionClass.Assets.hrElem.Ids.firstId.id).style.border = `${functionClass.Assets.hrElem.Border.num}px ${functionClass.Assets.hrElem.Border.borderType.normal} ${functionClass.Assets.hrElem.Border.borderColors.c1}` //'2px solid white';
-                                document.getElementById('card-background').style.border = '3px solid white';
-                                document.querySelector('#card-background > cour').style.color = `${(functionClass.Extra.colorVal = 'black')}`; //'black';
-                                wholeContainer.removeEventListener((functionClass.Assets.listeners[2]), () => {}, 500);
-                                //forestSfx.play();
-                                
-                                if (webScrollContain > 245 && (parseInt(window.getComputedStyle(secondIntro).getPropertyValue('left'))) == 0) {
-                                    document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation;
-                                    document.querySelector('.et').style.left = functionClass.Extra.values[0];
-                                    if (webScrollContain > 218 && parseInt(window.getComputedStyle(document.querySelector('.et')).getPropertyValue('left')) == functionClass.Extra.values[0]) {
-                                        Optimize2.style.animation = functionClass.Assets.Animations.animation;
-                                        Optimize2.style.left = functionClass.Extra.values[0];
-                                        if (webScrollContain > 255.6 && parseInt(window.getComputedStyle(Optimize2).getPropertyValue('left')) == functionClass.Extra.values[0]) {
-                                            Optimize3.style.animation = functionClass.Assets.Animations.animation;
-                                            Optimize3.style.left = functionClass.Extra.values[0];
-                                            if (webScrollContain > 298.9 && parseInt(window.getComputedStyle(Optimize3).getPropertyValue('left')) == functionClass.Extra.values[0]) {
-                                                firstDash.style.animation = functionClass.Assets.Animations.animation;
-                                                firstDash.style.left = functionClass.Extra.values[0];
-                                                firstDash.style.border = `2px dashed ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
-                                                if (webScrollContain > 308.5) {
-                                                    Optimize4.style.animation = functionClass.Assets.Animations.animation;
-                                                    Optimize4.style.left = functionClass.Extra.values[0];
+                        secondDot.style.animation = functionClass.Assets.Animations.animation;
+                        secondDot.style.left = functionClass.Extra.values[0];
+                        if (webScrollContain > 65.7 && (parseInt(window.getComputedStyle(secondDot).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
+                            document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation;
+                            document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[0];
+                            if (webScrollContain > 163 && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
+                                Card.style.animation = functionClass.Assets.Animations.animation;
+                                Card.style.left = functionClass.Extra.values[0];
+                                if (webScrollContain > 178 && (parseInt(window.getComputedStyle(Card).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
+                                    thirdDot.style.animation = functionClass.Assets.Animations.animation;
+                                    thirdDot.style.left = functionClass.Extra.values[0];
+                                    if (webScrollContain > 239.5) {
+                                        document.querySelector('#card-background cour').style.color = 'white';
+                                        wholeContainer.style.animation = '1 0.6s changeFrame ease-in';
+                                        wholeContainer.style.backgroundColor = functionClass.Extra.values[2];
+                                        wholeContainer.style.backgroundImage = forestBg;
+                                        wholeContainer.style.color = functionClass.Assets.hrElem.Border.borderColors.c1;
+                                        secondIntro.style.animation = functionClass.Assets.Animations.animation;
+                                        secondIntro.style.left = functionClass.Extra.values[0];
+                                        firstIntro.style.border = `${functionClass.Assets.hrElem.Border.num}.3px ${functionClass.Assets.hrElem.Border.borderType.normal} ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
+                                        secondIntro.style.border = `${functionClass.Assets.hrElem.Border.num}.3px ${functionClass.Assets.hrElem.Border.borderType.normal} ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
+                                        (functionClass.Assets.hrElem.Ids.firstId.id).style.border = `${functionClass.Assets.hrElem.Border.num}px dashed ${functionClass.Assets.hrElem.Border.borderColors.c1}` //'2px solid white';
+                                        document.querySelector('#card-background > cour').style.color = `${(functionClass.Extra.colorVal = 'black')}`; //'black';
+                                        wholeContainer.removeEventListener((functionClass.Assets.listeners[2]), () => {}, 500);
+                                        //forestSfx.play();
+                                        
+                                        if (webScrollContain > 245 && (parseInt(window.getComputedStyle(secondIntro).getPropertyValue('left'))) == 0) {
+                                            document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation;
+                                            document.querySelector('.et').style.left = functionClass.Extra.values[0];
+                                            if (webScrollContain > 218 && parseInt(window.getComputedStyle(document.querySelector('.et')).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                                Optimize2.style.animation = functionClass.Assets.Animations.animation;
+                                                Optimize2.style.left = functionClass.Extra.values[0];
+                                                if (webScrollContain > 255.6 && parseInt(window.getComputedStyle(Optimize2).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                                    Optimize3.style.animation = functionClass.Assets.Animations.animation;
+                                                    Optimize3.style.left = functionClass.Extra.values[0];
+                                                    if (webScrollContain > 298.9 && parseInt(window.getComputedStyle(Optimize3).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                                        firstDash.style.animation = functionClass.Assets.Animations.animation;
+                                                        firstDash.style.left = functionClass.Extra.values[0];
+                                                        firstDash.style.border = `2px dashed ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
+                                                        if (webScrollContain > 308.5) {
+                                                            Optimize4.style.animation = functionClass.Assets.Animations.animation;
+                                                            Optimize4.style.left = functionClass.Extra.values[0];
+                                                        } else {
+                                                            Optimize4.style.animation = functionClass.Assets.Animations.animation01;
+                                                            Optimize4.style.left = functionClass.Extra.values[1]
+                                                        }
+                                                    } else {
+                                                        firstDash.style.animation = functionClass.Assets.Animations.animation01;
+                                                        firstDash.style.left = functionClass.Extra.values[1];
+                                                    }
                                                 } else {
-                                                    Optimize4.style.animation = functionClass.Assets.Animations.animation01;
-                                                    Optimize4.style.left = functionClass.Extra.values[1]
+                                                    Optimize3.style.animation = functionClass.Assets.Animations.animation01;
+                                                    Optimize3.style.left = functionClass.Extra.values[1];
                                                 }
                                             } else {
-                                                firstDash.style.animation = functionClass.Assets.Animations.animation01;
-                                                firstDash.style.left = functionClass.Extra.values[1];
+                                                Optimize2.style.animation  = functionClass.Assets.Animations.animation01;
+                                                Optimize2.style.left = functionClass.Extra.values[1];
                                             }
                                         } else {
-                                            Optimize3.style.animation = functionClass.Assets.Animations.animation01;
-                                            Optimize3.style.left = functionClass.Extra.values[1];
+                                            document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation01;
+                                            document.querySelector('.et').style.left = functionClass.Extra.values[1];
                                         }
+                                        
+                                        if (webScrollContain > 317.5) {
+                                            firstIntro.style.animation = functionClass.Assets.Animations.animation01;
+                                            firstIntro.style.left = functionClass.Extra.values[1];
+                                            if (webScrollContain > 345) {
+                                                subT.style.animation = functionClass.Assets.Animations.animation01;
+                                                subT.style.left = functionClass.Extra.values[1];
+                                            } else {
+                                                subT.style.animation = functionClass.Assets.Animations.animation;
+                                                subT.style.left = functionClass.Extra.values[0];
+                                            }
+                                        } else {
+                                            firstIntro.style.animation = functionClass.Assets.Animations.animation;
+                                            firstIntro.style.left = functionClass.Extra.values[0];
+                                        }
+                                        
                                     } else {
-                                        Optimize2.style.animation  = functionClass.Assets.Animations.animation01;
-                                        Optimize2.style.left = functionClass.Extra.values[1];
+                                        if (window.getComputedStyle(secondIntro).getPropertyValue('animation') != null) {
+                                            document.querySelector('#card-background cour').style.color = 'black';
+                                            secondIntro.style.animation = functionClass.Assets.Animations.animation01;
+                                            //wholeContainer.style.animation = functionClass.Extra.values[2];
+                                            forestSfx.pause();
+                                            (functionClass.Assets.hrElem.Ids.firstId.id).style.border = '2px dashed black';
+                                            secondIntro.style.left = functionClass.Extra.values[1];
+                                            wholeContainer.style.backgroundColor = (functionClass.Extra.colorVal = 'white');
+                                            wholeContainer.style.backgroundImage = functionClass.Extra.values[2];
+                                            wholeContainer.style.backgroundSize = functionClass.Extra.values[2];
+                                            firstIntro.style.border = '2.3px solid black';
+                                            wholeContainer.style.color = 'initial';
+                                        }
+                                        wholeContainer.addEventListener((functionClass.Assets.listeners[2]), () => {
+                                            return secondIntro.style.animationPlayState = 'paused';
+                                        }, 500);
                                     }
                                 } else {
-                                    document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation01;
-                                    document.querySelector('.et').style.left = functionClass.Extra.values[1];
+                                    thirdDot.style.animation = functionClass.Assets.Animations.animation01;
+                                    thirdDot.style.left = functionClass.Extra.values[1];
                                 }
-                                
-                                if (webScrollContain > 317.5) {
-                                    firstIntro.style.animation = functionClass.Assets.Animations.animation01;
-                                    firstIntro.style.left = functionClass.Extra.values[1];
-                                    if (webScrollContain > 345) {
-                                        subT.style.animation = functionClass.Assets.Animations.animation01;
-                                        subT.style.left = functionClass.Extra.values[1];
-                                    } else {
-                                        subT.style.animation = functionClass.Assets.Animations.animation;
-                                        subT.style.left = functionClass.Extra.values[0];
-                                    }
-                                } else {
-                                    firstIntro.style.animation = functionClass.Assets.Animations.animation;
-                                    firstIntro.style.left = functionClass.Extra.values[0];
-                                }
-                                
                             } else {
-                                if (window.getComputedStyle(secondIntro).getPropertyValue('animation') != null) {
-                                    secondIntro.style.animation = functionClass.Assets.Animations.animation01;
-                                    //wholeContainer.style.animation = functionClass.Extra.values[2];
-                                    document.getElementById('card-background').style.border = '3px solid black';
-                                    forestSfx.pause();
-                                    (functionClass.Assets.hrElem.Ids.firstId.id).style.border = '2px solid black';
-                                    secondIntro.style.left = functionClass.Extra.values[1];
-                                    wholeContainer.style.backgroundColor = (functionClass.Extra.colorVal = 'white');
-                                    wholeContainer.style.backgroundImage = functionClass.Extra.values[2];
-                                    wholeContainer.style.backgroundSize = functionClass.Extra.values[2];
-                                    firstIntro.style.border = '2.3px solid black';
-                                    wholeContainer.style.color = 'initial';
-                                }
-                                wholeContainer.addEventListener((functionClass.Assets.listeners[2]), () => {
-                                    return secondIntro.style.animationPlayState = 'paused';
-                                }, 500);
+                                Card.style.animation = functionClass.Assets.Animations.animation01;
+                                Card.style.left = functionClass.Extra.values[1]; 
                             }
                         } else {
-                            Card.style.animation = functionClass.Assets.Animations.animation01;
-                            Card.style.left = functionClass.Extra.values[1];
+                            document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation01;
+                            document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[1];
                         }
                     } else {
-                        document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation01;
-                        document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[1];
+                        secondDot.style.animation = functionClass.Assets.Animations.animation01;
+                        secondDot.style.left = functionClass.Extra.values[1];
                     }
+                } else {
+                    divvedBar.style.animation = functionClass.Assets.Animations.animation01;
+                    divvedBar.style.left = functionClass.Extra.values[1];
                 }
             }
         });

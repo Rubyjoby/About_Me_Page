@@ -8,11 +8,11 @@ const CurrentTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()
 let mainContent = document.getElementById('flex-container');
 console.log(CurrentTime);
 
-/////////////////// BRIGHTNESS OPTION ////////////////////////////////////// 
+/////////////////// BRIGHTNESS OPTION //////////////////////////////////////
 
 // Set the brightness
 function setBrightness(percent) {
-    const brightSite = true;
+    const brightSite = false;
     let cnf;
     if (brightSite == true) {
         mainContent.style.filter = `brightness(${percent}%)`;
@@ -46,7 +46,8 @@ function changeBrightness(percent) {
             if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 'brightness(0)') {
                 clearInterval(decrease);
             }
-        }, 120000);
+        },
+            120000);
     } else if (CurrentTime == '24:0:00') {
         if (decrease != null && decrease != undefined) {
             clearInterval(decrease);
@@ -67,7 +68,8 @@ function changeBrightness(percent) {
             if (window.getComputedStyle(mainContent).getPropertyValue('filter') == 'brightness(200)') {
                 clearInterval(increase);
             }
-        }, 120000);
+        },
+            120000);
     }
     return;
 }
@@ -86,3 +88,34 @@ function changeContrast(rgbNum) {
         console.log('changed');
     }, 120000);
 }
+
+////// Media Queries /////
+// devices sizes
+let slidedphone = window.matchMedia('(min-width: 480px)');
+document.addEventListener('DOMContentLoaded', () => {
+    slidedphone.addEventListener('change', function phoneMedia(phone = slidedphone) {
+        const NavInput = document.querySelector('nav input');
+        NavInput.style.border = '3px solid black';
+        let popUp = document.querySelector('.popup-box2');
+        if (phone.matches) {
+            let replaceelement = document.createElement('a');
+            nav.classList.remove('nav-open');
+            nav.classList.remove('nav-close');
+            NavInput.style.position = 'relative';
+            NavInput.style.bottom = '34px';
+            NavInput.style.left = '53%';
+            clickHam.style.display = 'none';
+            popUp.remove();
+            //document.querySelector('header').style.backgroundImage = 'url(images/coding.jpg)';
+            NavInput.style.width = '145.7px';
+            document.querySelector('[title="The title of my journey"]').style.backgroundImage = 'url(images/coding.jpg)';
+            return NavInput.style.padding = parseInt(window.getComputedStyle(NavInput).getPropertyValue('padding')) + 'px';
+        } else {
+            clickHam.style.display = 'initial';
+            document.querySelector('[title="The title of my journey"]').style.backgroundImage = 'url(images/web-development-concept-person-using-260nw-1890313726.webp)';
+            NavInput.style.bottom = '';
+            NavInput.style.position = '';
+            NavInput.style.left = '';
+        }
+    });
+});
