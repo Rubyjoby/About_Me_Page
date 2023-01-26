@@ -2384,12 +2384,50 @@
                 <div id="parBox" style="border: 1px solid black;">
                     <cour cap id="title-of-the-box" style="border: 1px solid black; padding: 16.7px;">You have accepted this cookie</cour><br><br><br>
                     <details>
-                        <summary>Parts</summary>
-                        <cour cap style="margin-left: 10%; margin-right: 10%;">When you accepted the cookie</cour>
+                        <summary>Table of Contents</summary>
+                        <div>
+                        <cour id="content-name" cap>
+                            When you accepted the cookie
+                        </cour>
                         <hr>
-                    </details><br>
+                        <script>
+                            let ToC = document.querySelector('.cookiePop #parBox details');
+                            ToC.addEventListener('click', detailsOpen);
+                            function detailsOpen() {
+                                if (!ToC.hasAttribute('open')) {
+                                    ToC.style.borderBottom = '1px solid black';
+                                } else {
+                                    ToC.style.borderBottom = 'initial';
+                                    setTimeout(() => {
+                                        ToC.style.height = 'initial';
+                                    }, 1200);
+                                }
+                            }
+                        </script><br>
+                        <cour id="content-name" cap>
+                            When you don't accept the cookie
+                        </cour>
+                        <hr>
+                        <div id="cookie-list">
+                            <cour>
+                                > Limited access
+                            </cour><br>
+                            <cour>
+                                > Frequent notifications
+                            </cour><br>
+                            <cour>
+                                > No brightness <br> and contrast
+                            </cour><br>
+                            <cour>
+                                > Locked cookie Pfp
+                            </cour><br>
+                            <cour>
+                                > No extra lives
+                            </cour>
+                        </div>
+                    </details><br><br>
                     <div id="cons">
-                        <cour cap style="font-size: 15px; text-decoration: underline black;">When you accepted the cookie</cour><img src="images/cookie.svg" alt="cookie Dies :("><br>
+                        <cour cap class="sub-title">When you accepted the cookie</cour><img src="images/cookie.svg" alt="cookie Dies :("><br>
                         <cour>
                             <img src="images/cookie.svg" alt="cookie Dies :(">
                             daily notfications
@@ -2408,9 +2446,9 @@
                             <img src="images/cookie.svg" alt="cookie Dies :(">
                             You now have 2 extra lives 💝💝 in the game <q>Splint</q>
                         </cour>
-                    </div><br><br>
+                    </div><br>
                     <div id="cons">
-                        <cour cap style="font-size: 15px; text-decoration: underline black;">
+                        <cour class="sub-title" cap>
                             When you don't accept the cookie
                         </cour>
                         <br>
@@ -2430,10 +2468,118 @@
                                 view pfp
                             </a>
                         </cour>
-                    </div><br>
-                    <cour>
-                        What is a cookie! 
-                    </cour>
+                        <br>
+                        <cour>
+                            <img src="images/milk-bottle.svg">
+                            No extra lives on the game <q>Splint</q>
+                        </cour>
+                    </div><br><hr>
+                    <div id="explain">
+                        <br>
+                        <cour style="font-size: 12.4px !important; padding: var(--Classic-padding); background-color: lightgreen; width: 300px !important;">
+                            What is a cookie?
+                        </cour><br>
+                        <cour>
+                            You may think of it as food
+                        </cour>
+                        <img src="assets/gifs/eating.jpg" height="50" width="50">
+                        <cour>
+                            But it's not.
+                        </cour>
+                        <cour>A correct way of this is: </cour><br><br>
+                        <cour style="padding: 5px; background-color: wheat;">
+                            What is a <s>cookie</s> browser cookie?
+                        </cour><br><br>
+                        <cour>A cookie is data stored in a browser.</cour>
+                        <cour>
+                            This 
+                            data can be used for tracking the "movement"
+                            of a person in the website
+                            such as account login,
+                            current pages,
+                            and etc.
+                        </cour><br><br>
+                        <cour>An example of this data might be:</cour><br>
+                        <div id="codebox">
+                            <cour id="jsonName">data.json</cour><br>
+                            <cour>
+                                {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<cour id="jsonky">name</cour>: <cour id="jsonStr">"Robert Williams"</cour>,<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<cour id="jsonky">age</cour>: <cour id="jsonNum">34</cour>,<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<cour id="jsonky">loginID</cour>: <cour id="jsonNum">3450</cour> <br>
+                                }
+                            </cour>
+                        </div><br>
+                        <cour>Originally, the cookie was used to store data from small files like json and etc at around 10kbs or less.</cour><br><br>
+                        <cour class="tri-title">
+                            Why do i need a cookie?
+                        </cour><br><br>
+                        <cour>
+                            One of the reasons
+                            is mentioned above,
+                            to track of how you use
+                            and interact with the website.
+                        </cour><br>
+                        <cour>
+                            This is important if you want to sign-in/login-in and
+                            get back to the last website you visited as <u>I reads the 
+                            data</u> sent to the server.
+                        </cour><br>
+                        <div>
+                            <cour id="pop-list-name">
+                                Reasons on why you should use cookies <img height="24" width="24" src="assets/gifs/book.gif" />
+                            </cour><br><br>
+                            <cour id="pop-list">
+                                > Stores data
+                            </cour><br>
+                            <cour id="pop-list">
+                                > keeps track of your data
+                            </cour><br>
+                            <cour id="pop-list">
+                                > bonus access <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;° consider this as free premium
+                            </cour><br>
+                            <cour id="pop-list">
+                                > stays even if the website is exited
+                            </cour><br>
+                            <cour id="pop-list">
+                                > Recieves notfications more often
+                            </cour>
+                        </div><br>
+                        <cour>
+                            Either way, you can choose to accept or not accept the cookie.
+                        </cour><br><br>
+                        <cour class="tri-title">
+                            How does the browser read the cookie?
+                        </cour><br><br>
+                        <cour>
+                            When data is sent to the server, <br>
+                            the server stores it in the console
+                            and onto the <q>Cookie</q> label.
+                            The browser reads it and remembers
+                            recent actions taken in the website
+                            thus saving it automatically.
+                        </cour><br><br>
+                        <div style="border-radius: 10px; background-color: lightsteelblue; text-align: center; border: 1px solid black; padding: 5px;">
+                            <cour>
+                                An example of this might be:
+                            </cour><br>
+                            <img src="images/eid.png" height="60" width="60">
+                            <cour>An html file</cour><br>
+                            <cour>° <br> ° <br> °</cour><br>
+                            <img src="assets/gifs/elmoFire.gif" height="30" width="30" />
+                            <cour>
+                                The server
+                            </cour>
+                        </div><br><br>
+                        <cour class="tri-title">
+                            Conclusion
+                        </cour><br><br>
+                        <cour>
+                            A (cookie/browser cookie) is data stored in a small file.
+                            That data is commonly used as personal info
+                        </cour><br>
+                    </div><hr>
                 </div><br>
                 <cour id="Txt-Tap">> Tap to continue</cour>
             </div>
@@ -2449,7 +2595,7 @@
             <div>
                 <!-- footer for the website -->
                 <footer id="footer">
-                    <div style="overflow: scroll;" id="gray-scroll-bar" class="cyan-thumb">
+                    <div style="overflow: scroll;" id="gray-scroll-bar" ="cyan-thumb">
                         <dog id="dog-flex" style="font-size: 25px; margin-left: 35%;">Websites</dog>
                         <div style="overflow: scroll; border: 2px solid black; background-color: lightgreen; padding: 5px;">
                             <a href="https://m.facebook.com/rubyabenion.abenion" target="_blank">

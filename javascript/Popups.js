@@ -92,10 +92,10 @@ let tags = [document.createElement('div'), document.createElement('cour'), docum
 
 // add and loop some elements and ids
 tags[0].id = 'cookie-list';
-document.querySelector('.cookiePop details').appendChild(tags[0]);
+document.querySelector('.cookiePop details script').before(tags[0]);
 for (var f in cookieList) {
     tags[1].id = 'link_' + f;
-    tags[1].innerHTML = `<a href='#' style='text-decoration: none; color: rgb(1${f}${f}, 5${f}, 23${f});'>> ${cookieList[f]}</a>`;
+    tags[1].innerHTML = `<a href='#' style='text-decoration: none;'>> ${cookieList[f]}</a>`;
     tags[0].append(tags[1].cloneNode(true));
 }
 // check if a certain tag[0] has any children
