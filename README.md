@@ -1,7 +1,8 @@
-![testing](./images/webDevLogo.jpg)
+![altered](./images/webDevLogo.jpg)
 
-# About_Me_Page
+# Overview
 This page is about how I became a web developer
+![altered](./assets/gifs/eating.jpg)
 
 ## A little preview of my website
 no.
