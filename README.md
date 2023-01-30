@@ -1,4 +1,4 @@
-![testing](./images/webDevLogo.jpg)
+![testing](./images/webDevLogo.jpg =24x)
 
 # About_Me_Page
 This page is about how I became a web developer
@@ -8,5 +8,3 @@ no.
 
 # Note
 if you see this, Im still not finishing writing this file:)
-
-<img src="./images/webDevLogo.jpg" alt="he" />
