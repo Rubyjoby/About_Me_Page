@@ -1,4 +1,4 @@
-![testing](./images/webDevLogo.png)
+![testing](./images/webDevLogo.jpg)
 
 # About_Me_Page
 This page is about how I became a web developer
