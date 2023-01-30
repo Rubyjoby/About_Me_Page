@@ -1,4 +1,4 @@
-![testing](./images/webDevLogo.jpg =24x)
+![testing](./images/webDevLogo.jpg =100x80)
 
 # About_Me_Page
 This page is about how I became a web developer
