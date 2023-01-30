@@ -247,17 +247,16 @@ header .text:hover {
 
 .cookieNotification {
     padding: 4.5px;
-    background-color: bisque;
+    background-color: lightsteelblue;
     position: fixed;
-    top: 573;
+    top: 609;
     opacity: 1;
-    height: 93;
+    height: 56;
     width: 400px;
     margin-left: -7.9px;
-    border-top: 2px solid black;
     margin-right: -7.9px;
     animation: 1s Run 1 linear;
-    border-left: 2px solid black;
+    border: 2px solid black;
 }
 
 @keyframes Run {
@@ -269,26 +268,53 @@ header .text:hover {
     }
 }
 
-.cookieNotification cour {
-    text-align: var(--centered-Text) !important;
-    font-size: 23.45px;
+.cookieNotification #cookieNofTxt {
+    font-size: 15px;
     position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
     bottom: 12
     color: white;
 }
 
-.cookieNotification .acceptBtn {
-    border: 1px solid black;
-    background-color: lightblue;
+.cookieNotification .acceptBtn,
+.cookieNotification .deny-Button,
+.cookieNotification .go_back_button {
     color: black;
     padding: 2px;
 }
 
-.cookieNotification .deny-Button {
-    border: 1px solid black;
-    background-color: salmon;
-    color: black;
-    padding: 2px;
+.cookieNotification .aliceBlue-d {
+    background: linear-gradient(to bottom, aliceBlue 0%, var(--glass) 0%);
+}
+
+.cookieNotification .aliceBlue-d:hover {
+    animation: 560ms aliceIsBlue 1 ease forwards;
+}
+
+@keyframes aliceIsBlue {
+    0% {
+        background: linear-gradient(to bottom, aliceBlue 0%, var(--glass) 0%);
+    }
+    10% {
+        background: linear-gradient(to bottom, aliceBlue 10%, var(--glass) 10%);
+    }
+    25% {
+        background: linear-gradient(to bottom, aliceBlue 25%, var(--glass) 25%);
+    }
+    45% {
+        background: linear-gradient(to bottom, aliceBlue 45%, var(--glass) 45%);
+    }
+    60% {
+        background: linear-gradient(to bottom, aliceBlue 60%, var(--glass) 60%);
+    }
+    81% {
+        background: linear-gradient(to bottom, aliceBlue 81%, var(--glass) 81%);
+    }
+    100% {
+        background: linear-gradient(to bottom, aliceBlue 100%, var(--glass) 0%);
+        box-shadow: 0 0 25px aliceBlue, 0 0 25px snow, 0 0 50px white;
+    }
 }
 
 .textPop {
@@ -441,6 +467,18 @@ header .text:hover {
     margin-top: 6%;
 }
 
+.cookiePop #parBox #terminal-container {
+    background-color: black;
+    color: white;
+    padding: 2px;
+    height: 150;
+    text-align: left;
+    width: 291;
+    overflow: hidden;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
 #codeBox {
     height: 80;
     width: 200;
@@ -471,8 +509,14 @@ header .text:hover {
 }
 
 .cookiePop #parBox #explain .tri-title {
-    padding: 5px;
     background: lightsteelblue;
+    border: none;
+}
+
+.cookiePop #parBox .tri-title {
+    background: linear-gradient(to left, snow, lightsteelblue);
+    padding: 5px;
+    border: 1px solid black;
 }
 
 .cookiePop #parBox details {
@@ -708,7 +752,7 @@ header .text:hover {
     }
     header {
         font-size: 25px;
-        padding: 20px;
+        padding: 30px !important;
         background-image: url(images/nav/A.S/coding.jpg) !important;
         width: 44.74375rem;
     }
@@ -838,11 +882,18 @@ header .text:hover {
     }
     .cookieNotification {
         overflow: hidden !important;
-        top: 50 !important;
-        height: 65 !important;
+        top: 56 !important;
+        height: 31 !important;
         border-left: none !important;
+        border-top: 2px solid white !important;
         border-bottom: 2px solid black !important;
         width: 44.74375rem !important;
+    }
+    .cookieNotification br {
+        display: none !important;
+    }
+    .cookieNotification #cookieNofTxt {
+        margin: initial !important;
     }
 }
 h1 {
@@ -895,7 +946,7 @@ h1 {
 }
 
 .navigation-bar .navSelect:hover {
-    animation: 1s theBox 1 ease forwards;
+    animation: 465ms theBox 1 ease forwards;
 }
 
 .popup-box #firstView #con2 #mainpoint .navSelect {

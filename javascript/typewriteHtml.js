@@ -209,12 +209,10 @@ function startTheTouch() {
                     divvedBar.style.animation = functionClass.Assets.Animations.animation;
                     divvedBar.style.left = functionClass.Extra.values[0];
                     if (webScrollContain > 64.5) {
-                        secondDot.style.animation = functionClass.Assets.Animations.animation;
-                        secondDot.style.left = functionClass.Extra.values[0];
-                        if (webScrollContain > 65.7 && (parseInt(window.getComputedStyle(secondDot).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
-                            document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation;
-                            document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[0];
-                            if (webScrollContain > 163 && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
+                        document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation;
+                        document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[0];
+                        if (webScrollContain > 65.7 && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
+                            if (webScrollContain > 163/* && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]*/) {
                                 Card.style.animation = functionClass.Assets.Animations.animation;
                                 Card.style.left = functionClass.Extra.values[0];
                                 if (webScrollContain > 178 && (parseInt(window.getComputedStyle(Card).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
@@ -313,13 +311,10 @@ function startTheTouch() {
                                 Card.style.animation = functionClass.Assets.Animations.animation01;
                                 Card.style.left = functionClass.Extra.values[1]; 
                             }
-                        } else {
-                            document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation01;
-                            document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[1];
                         }
                     } else {
-                        secondDot.style.animation = functionClass.Assets.Animations.animation01;
-                        secondDot.style.left = functionClass.Extra.values[1];
+                        document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation01;
+                        document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[1];
                     }
                 } else {
                     divvedBar.style.animation = functionClass.Assets.Animations.animation01;

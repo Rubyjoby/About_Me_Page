@@ -668,11 +668,13 @@
                                         NavInput.style.left = '53%';
                                         clickHam.style.display = 'none';
                                         popUp.remove();
+                                        document.querySelector('.cookieNotification').removeChild('br');
                                         //document.querySelector('header').style.backgroundImage = 'url(images/coding.jpg)';
                                         NavInput.style.width = '145.7px';
                                         document.querySelector('[title="The title of my journey"]').style.backgroundImage = 'url(images/coding.jpg)';
                                         return NavInput.style.padding = parseInt(window.getComputedStyle(NavInput).getPropertyValue('padding')) + 'px';
                                     } else {
+                                        document.querySelector('.cookieNotification').appendChild('br');
                                         clickHam.style.display = 'initial';
                                         document.querySelector('[title="The title of my journey"]').style.backgroundImage = 'url(images/web-development-concept-person-using-260nw-1890313726.webp)';
                                         NavInput.style.bottom = '';
@@ -2315,7 +2317,7 @@
                     </div><br>
                     <div id="second-cute-container">
                         <img src="images/cookie.svg" height="35" ="50" />
-                        <cour><------A cookie</cour><br>
+                        <cour>A cookie</cour><br>
                         <cour>( just eat it :| )</cour>
                     </div><br>
                     <div id="table">
@@ -2336,10 +2338,9 @@
                 <cour class="continueTxt pop2">Tap here to continue</cour>
             </div>
             <div class="cookieNotification">
-                <cour cap id="cookieNofTxt">Do you want a <u>cookie</u>?</cour>
-                <img src="images/cookie.svg" height="40" width="40"><br><br>
-                <cour class="deny-Button" style="font-size: 15px;">Reject This Cookie</cour>
-                <cour class="acceptBtn" style="font-size: 15px;">Accept This Cookie</cour>
+                <cour cap id="cookieNofTxt">Do you want a <u>cookie</u>?</cour><br>
+                <cour class="deny-Button aliceBlue-d" style="font-size: 15px;">Reject This Cookie</cour>
+                <cour class="acceptBtn aliceBlue-d" style="font-size: 15px;">Accept This Cookie</cour>
                 <script>
                     let btnTimeout = setTimeout(() => {
                         const leAccept = document.querySelector('.acceptBtn');
@@ -2353,8 +2354,6 @@
                                 goBackBtn.class = 'go_back_button';
                                 goBackBtn.style.fontSize = 15 + 'px';
                                 goBackBtn.innerHTML = 'go back to think';
-                                goBackBtn.style.border = '1px solid black';
-                                goBackBtn.style.backgroundColor = 'lightyellow';
                                 goBackBtn.style.color = 'black';
                                 goBackBtn.style.padding = '2px';
                                 document.querySelector('.cookieNotification').appendChild(goBackBtn);
@@ -2579,7 +2578,18 @@
                             A (cookie/browser cookie) is data stored in a small file.
                             That data is commonly used as personal info
                         </cour><br>
-                    </div><hr>
+                    </div><br><hr>
+                    <cour class="tri-title">
+                        Cookie Profile
+                    </cour><br><br>
+                    <cour>
+                        Although normally, browser cookies can't be edited
+                    </cour><br>
+                    <div id="terminal-container">
+                        <div>
+                            <term>> A new cookie has been created</term>
+                        </div>
+                    </div>
                 </div><br>
                 <cour id="Txt-Tap">> Tap to continue</cour>
             </div>
