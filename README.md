@@ -8,3 +8,5 @@ no.
 
 # Note
 if you see this, Im still not finishing writing this file:)
+
+<img src="./images/webDevLogo.jpg" alt="he" />
