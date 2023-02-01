@@ -1,4 +1,4 @@
-<img alt="new" src="images/webDevLogo.jpg" height="120" width="300" />
+<img alt="new" src="images/webDevLogo.jpg" height="150" width="300" />
 
 # Overview
 This page is about how I became a web developer
@@ -8,4 +8,4 @@ This page is about how I became a web developer
 no.
 
 # Note
-if you see this, Im still not finishing writing this file
+if you see this, Im still not finishing writing this 
