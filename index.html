@@ -2583,12 +2583,45 @@
                         Cookie Profile
                     </cour><br><br>
                     <cour>
-                        Although normally, browser cookies can't be edited
+                        Although normally, browser cookies can't be edited.
                     </cour><br>
                     <div id="terminal-container">
                         <div>
-                            <term>> A new cookie has been created</term>
+                            <term>
+                                Bake a cookie? Y/N
+                                <br>> <input id="yes-no" type="text">
+                            </term><br>
                         </div>
+                        <script>
+                            const term = document.getElementById('terminal-container');
+                            const theInput = document.querySelector('.cookiePop #parBox #terminal-container #yes-no');
+                            let textValue = theInput.innerHTML;
+                            const keyWrd = ['y', 'n'];
+                            let termChild = 'term';
+                            function changeInput() {
+                                const keyWrd = ['y', 'n'];
+                                if (textValue == keyWrd[0]) {
+                                    alert('yes');
+                                } else {
+                                    alert('no');
+                                }
+                            }
+                            /*function detectChange() {
+                                if (textValue == keyWrd[0]) {
+                                    alert('yes');
+                                    termChild.innerHTML = '> cookie created!'
+                                    term.appendChild(termChild);
+                                    keyWrd.pop();
+                                    return keyWrd;
+                                } else {
+                                    alert('no');
+                                    termChild.innerHTML = '> cookie canceled :(';
+                                    term.appendChild(termChild);
+                                    keyWrd.shift();
+                                    return keyWrd;
+                                }
+                            }*/
+                        </script>
                     </div>
                 </div><br>
                 <cour id="Txt-Tap">> Tap to continue</cour>
