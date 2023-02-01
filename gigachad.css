@@ -476,7 +476,14 @@ header .text:hover {
     width: 291;
     overflow: hidden;
     font-size: 12px;
-    border-radius: 10px;
+    border: 2px solid lightsteelblue;
+}
+
+.cookiePop #parBox #terminal-container input {
+    background-color: transparent;
+    border: none;
+    font-family: var(--courier-font);
+    color: white;
 }
 
 #codeBox {
@@ -508,15 +515,14 @@ header .text:hover {
     color: lavender;
 }
 
-.cookiePop #parBox #explain .tri-title {
+.cookiePop #parBox #explain .tri-title,
+.cookiePop #parBox .tri-title {
     background: lightsteelblue;
     border: none;
 }
 
 .cookiePop #parBox .tri-title {
-    background: linear-gradient(to left, snow, lightsteelblue);
     padding: 5px;
-    border: 1px solid black;
 }
 
 .cookiePop #parBox details {
