@@ -1,4 +1,4 @@
-![altered](./images/webDevLogo.jpg)
+<img alt="new" src="images/webDevLogo.jpg" height="80" width="100" />
 
 # Overview
 This page is about how I became a web developer
