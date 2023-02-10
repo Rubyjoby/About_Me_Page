@@ -245,6 +245,30 @@ header .text:hover {
     border: 1.56px solid black;
 }
 
+.verifyPop {
+    position: fixed;
+    background-color: lightsteelblue;
+    padding: 5px;
+    height: 10rem;
+    width: 343px;
+    top: 178;
+    border: 2px solid black;
+}
+
+.verifyPop #side-background {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-bottom: none;
+}
+
+.verifyPop #preFc #first-column {
+    text-align: left;
+    width: 167 !important;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
 .cookieNotification {
     padding: 4.5px;
     background-color: lightsteelblue;
@@ -257,6 +281,7 @@ header .text:hover {
     margin-right: -7.9px;
     animation: 1s Run 1 linear;
     border: 2px solid black;
+    user-select: none;
 }
 
 @keyframes Run {
@@ -271,8 +296,6 @@ header .text:hover {
 .cookieNotification #cookieNofTxt {
     font-size: 15px;
     position: relative;
-    margin-left: 20%;
-    margin-right: 20%;
     bottom: 12
     color: white;
 }
@@ -281,6 +304,7 @@ header .text:hover {
 .cookieNotification .deny-Button,
 .cookieNotification .go_back_button {
     color: black;
+    border: 1px solid black;
     padding: 2px;
 }
 
@@ -313,7 +337,7 @@ header .text:hover {
     }
     100% {
         background: linear-gradient(to bottom, aliceBlue 100%, var(--glass) 0%);
-        box-shadow: 0 0 25px aliceBlue, 0 0 25px snow, 0 0 50px white;
+        border: none;
     }
 }
 
@@ -468,15 +492,15 @@ header .text:hover {
 }
 
 .cookiePop #parBox #terminal-container {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 2px;
     height: 150;
     text-align: left;
     width: 291;
     overflow: hidden;
     font-size: 12px;
-    border: 2px solid lightsteelblue;
+    border: 1px solid black;
 }
 
 .cookiePop #parBox #terminal-container input {
@@ -832,7 +856,14 @@ header .text:hover {
     #menu {
         margin-right: 5%;
         margin-left: 5%;
-        background: lavender !important;
+        padding: 5px !important;
+    }
+    details > summary {
+        list-style-type: '- ' !important;
+    }
+    details[open] > summary {
+        animation: none !important;
+        list-style-type: '-- ' !important;
     }
     dog {
         font-family: 'PrintMe' !important;
@@ -1941,11 +1972,35 @@ nope .list-bg details li {
 details > summary {
     font-family: 'Courier New';
     font-weight: bolder;
-    list-style-type: '> ';
+    list-style-type: ':-) ';
 }
 
 details[open] > summary {
-    list-style-type: '< ';
+    animation: emotionsChange 1.3s ease-in 1;
+}
+
+@keyframes emotionsChange {
+    0% {
+        list-style-type: ':-) ';
+    }
+    25% {
+        list-style-type: '(-: ';
+    }
+    50% {
+        list-style-type: ':-) ';
+    }
+    65% {
+        list-style-type: '(-: ';
+    }
+    75% {
+        list-style-type ':-| ';
+    }
+    81.5% {
+        list-style-type: ':-/ ';
+    }
+    100% {
+        list-style-type: ':O ';
+    }
 }
 
 #php {

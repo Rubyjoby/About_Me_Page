@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <nav class="navigation-bar">
+                <div>
+                    <img title="home" src="images/nav/acc.jpg" alt="no-icon" class="img-nav" tabindex="1" />
+                    <img height="40" width="60" class="navSelect" src="images/nav/house.svg" id="windows" />
+                    <!--<a href="mailto:retroane957@gmail.com ?subject=feedback">email me</a>-->
+                    <img class="navSelect" src="images/nav/email-address-icon.svg" height="35" width="50" />
+                    <img class="navSelect" src="images/nav/boxes-box.svg" height="40" width="60" />
+                    <img class="navSelect" id="theKey" src="images/nav/key.svg" height="35" width="50" />
+                    <img class="navSelect" aria-label="menu" style="display: initial;" src="images/nav/burger2.svg" id="ham" height="40" width="55" />
+                </div>
+                <!-- Script for the nav elements -->
+                <script>
+                "use strict";
+                    document.querySelector('[src="images/nav/email-address-icon.svg"]').addEventListener('click', () => {
+                        if (document.querySelector('.navigation-bar')) {
+                            window.open('mailto:retroane957@gmail.com?subject=feedback');
+                        } else {
+                            alert('didnt work');
+                        }
+                    });
+                    // Open next window as a
+                    var linkOpen = document.getElementById("windows");
+                    linkOpen.addEventListener("click", function Winlink() {
+                        if (linkOpen) {
+                            window.open('How_to_mod.html');
+                        } else {
+                            alert("didn't work!");
+                        }
+                    });
+                    
+                    if (navigator.vibrate) {
+                        window.navigator.vibrate([100, 50, 200, 100, 300]);
+                    }
+                    
+                    // displays text in console and expands navigation if clicked
+                    let clickHam = document.getElementById("ham");
+                    clickHam.addEventListener('click', openNav);
+                    function openNav() {
+                        const navBox = document.querySelector('.popup-box');
+                        if (clickHam) {
+                            clickHam.removeEventListener('click', openNav);
+                            navBox.style.opacity = 1;
+                            navBox.style.animation = 'scaled 1 0.8s ease-in-out';
+                            navBox.style.transform = 'scale(1.12, 1)';
+                            clickHam.addEventListener('click', closeNav);
+                            function closeNav() {
+                                clickHam.removeEventListener('click', closeNav);
+                                clickHam.addEventListener('click', openNav);
+                                navBox.style.opacity = 0;
+                                navBox.style.animation = 'scaledOut 1 0.8s ease-in-out';
+                                navBox.style.transform = 'scale(0, 0)';
+                            }
+                        }
+                    }
+                    const newcssprops = {
+                        join: ';',
+                        properties: {
+                            backgroundProperty: {
+                                bgc: function (color) {
+                                    return color + color
+                                },
+                                bg: 'none'
+                            },
+                            borderProperty: {
+                                brd: 'none',
+                                brdr: '0%'
+                            },
+                            marginProperty: {
+                                mrg: 'none'
+                            }
+                        }
+                    }
+                    let joinTogether = [
+                        [newcssprops.properties.backgroundProperty.bg],
+                        [newcssprops.properties.marginProperty]
+                    ];
+                    console.log(joinTogether);
+                    console.log(newcssprops.properties.backgroundProperty);
+                    const cssprops = [
+                            'background-color: blue',
+                            'margin: 5px',
+                            'bo'
+                    ].join(";");
+                    let nav = document.querySelector(".navigation-bar");
+                    
+                    document.querySelector('.navigation-bar .navSelect').addEventListener('mouseout', () => {
+                        //let musicCase = [new Audio(''), new Audio()];
+                        console.log('yes');
+                    });
+                </script>
+            </nav>
+        </div>
+    </body>
+</html>

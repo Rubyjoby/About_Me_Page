@@ -211,13 +211,13 @@ function startTheTouch() {
                     if (webScrollContain > 64.5) {
                         document.querySelector('#flex-container .second').style.animation = functionClass.Assets.Animations.animation;
                         document.querySelector('#flex-container .second').style.left = functionClass.Extra.values[0];
-                        if (webScrollContain > 65.7 && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
-                            if (webScrollContain > 163/* && (parseInt(window.getComputedStyle(document.querySelector('#flex-container .second')).getPropertyValue('left'))) == functionClass.Extra.values[0]*/) {
+                        if (webScrollContain > 65.7) {
+                            if (webScrollContain > 163) {
                                 Card.style.animation = functionClass.Assets.Animations.animation;
                                 Card.style.left = functionClass.Extra.values[0];
-                                if (webScrollContain > 178 && (parseInt(window.getComputedStyle(Card).getPropertyValue('left'))) == functionClass.Extra.values[0]) {
-                                    thirdDot.style.animation = functionClass.Assets.Animations.animation;
-                                    thirdDot.style.left = functionClass.Extra.values[0];
+                                if (webScrollContain > 178) {
+                                    secondDot.style.animation = functionClass.Assets.Animations.animation;
+                                    secondDot.style.left = functionClass.Extra.values[0];
                                     if (webScrollContain > 239.5) {
                                         document.querySelector('#card-background cour').style.color = 'white';
                                         wholeContainer.style.animation = '1 0.6s changeFrame ease-in';
@@ -233,22 +233,36 @@ function startTheTouch() {
                                         wholeContainer.removeEventListener((functionClass.Assets.listeners[2]), () => {}, 500);
                                         //forestSfx.play();
                                         
-                                        if (webScrollContain > 245 && (parseInt(window.getComputedStyle(secondIntro).getPropertyValue('left'))) == 0) {
+                                        if (webScrollContain > 245) {
                                             document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation;
                                             document.querySelector('.et').style.left = functionClass.Extra.values[0];
-                                            if (webScrollContain > 218 && parseInt(window.getComputedStyle(document.querySelector('.et')).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                            if (webScrollContain > 218) {
                                                 Optimize2.style.animation = functionClass.Assets.Animations.animation;
                                                 Optimize2.style.left = functionClass.Extra.values[0];
-                                                if (webScrollContain > 255.6 && parseInt(window.getComputedStyle(Optimize2).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                                if (webScrollContain > 255.6) {
                                                     Optimize3.style.animation = functionClass.Assets.Animations.animation;
                                                     Optimize3.style.left = functionClass.Extra.values[0];
-                                                    if (webScrollContain > 298.9 && parseInt(window.getComputedStyle(Optimize3).getPropertyValue('left')) == functionClass.Extra.values[0]) {
+                                                    if (webScrollContain > 298.9) {
                                                         firstDash.style.animation = functionClass.Assets.Animations.animation;
                                                         firstDash.style.left = functionClass.Extra.values[0];
                                                         firstDash.style.border = `2px dashed ${functionClass.Assets.hrElem.Border.borderColors.c1}`;
                                                         if (webScrollContain > 308.5) {
                                                             Optimize4.style.animation = functionClass.Assets.Animations.animation;
                                                             Optimize4.style.left = functionClass.Extra.values[0];
+                                                            if (webScrollContain > 317.5) {
+                                                                firstIntro.style.animation = functionClass.Assets.Animations.animation01;
+                                                                firstIntro.style.left = functionClass.Extra.values[1];
+                                                                if (webScrollContain > 345) {
+                                                                    subT.style.animation = functionClass.Assets.Animations.animation01;
+                                                                    subT.style.left = functionClass.Extra.values[1];
+                                                                } else {
+                                                                    subT.style.animation = functionClass.Assets.Animations.animation;
+                                                                    subT.style.left = functionClass.Extra.values[0];
+                                                                }
+                                                            } else {
+                                                                firstIntro.style.animation = functionClass.Assets.Animations.animation;
+                                                                firstIntro.style.left = functionClass.Extra.values[0];
+                                                            }
                                                         } else {
                                                             Optimize4.style.animation = functionClass.Assets.Animations.animation01;
                                                             Optimize4.style.left = functionClass.Extra.values[1]
@@ -269,22 +283,6 @@ function startTheTouch() {
                                             document.querySelector('.et').style.animation = functionClass.Assets.Animations.animation01;
                                             document.querySelector('.et').style.left = functionClass.Extra.values[1];
                                         }
-                                        
-                                        if (webScrollContain > 317.5) {
-                                            firstIntro.style.animation = functionClass.Assets.Animations.animation01;
-                                            firstIntro.style.left = functionClass.Extra.values[1];
-                                            if (webScrollContain > 345) {
-                                                subT.style.animation = functionClass.Assets.Animations.animation01;
-                                                subT.style.left = functionClass.Extra.values[1];
-                                            } else {
-                                                subT.style.animation = functionClass.Assets.Animations.animation;
-                                                subT.style.left = functionClass.Extra.values[0];
-                                            }
-                                        } else {
-                                            firstIntro.style.animation = functionClass.Assets.Animations.animation;
-                                            firstIntro.style.left = functionClass.Extra.values[0];
-                                        }
-                                        
                                     } else {
                                         if (window.getComputedStyle(secondIntro).getPropertyValue('animation') != null) {
                                             document.querySelector('#card-background cour').style.color = 'black';
@@ -304,8 +302,8 @@ function startTheTouch() {
                                         }, 500);
                                     }
                                 } else {
-                                    thirdDot.style.animation = functionClass.Assets.Animations.animation01;
-                                    thirdDot.style.left = functionClass.Extra.values[1];
+                                    secondDot.style.animation = functionClass.Assets.Animations.animation01;
+                                    secondDot.style.left = functionClass.Extra.values[1];
                                 }
                             } else {
                                 Card.style.animation = functionClass.Assets.Animations.animation01;
@@ -322,7 +320,10 @@ function startTheTouch() {
                 }
             }
         });
-    } else {
+    }/*else if () {
+        
+    }*/
+    else {
         wholeContainer.removeEventListener((functionClass.Assets.listeners[1]), (event) => {});
     }
     console.error('wow');
