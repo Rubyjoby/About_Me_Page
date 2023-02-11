@@ -2,7 +2,7 @@
 
 # Overview
 This page is about how I became a web developer
-<img alt="new" src="assets/gifs/eating.jpg" height="50" width="50" />
+<img alt="new" src="images/nav/A.S/coding.jpg" height="75" width="75" />
 
 ## A little preview of my website
 no.
