@@ -249,7 +249,7 @@ header .text:hover {
     position: fixed;
     background-color: lightsteelblue;
     padding: 5px;
-    height: 10rem;
+    height: 12rem;
     width: 343px;
     top: 178;
     border: 2px solid black;
@@ -262,11 +262,22 @@ header .text:hover {
     border-bottom: none;
 }
 
-.verifyPop #preFc #first-column {
+.verifyPop #preFc #first-column #title-of-the-box {
+    background-color: lightsteelblue;
+    padding: 1.3px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.verifyPop #preFc #first-column,
+.verifyPop #preFc #second-column {
     text-align: left;
-    width: 167 !important;
+    width: 329 !important;
     border-right: 1px solid black;
+    border-left: 1px solid black;
     border-bottom: 1px solid black;
+    background-color: snow;
+    padding: 2px;
 }
 
 .cookieNotification {
