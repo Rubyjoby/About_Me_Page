@@ -162,3 +162,31 @@ if (cookieTxt.innerHTML == cookieTxt.innerHTML) {
     }
 }
 /////////////////////////////////////////////////
+
+/////////////////  HOVER MODE  /////////////////
+///////////////////////////////////////////////
+/* This is the part where a popUp when hovered,
+   has effects
+*/
+let origHamBurgerPopUp = document.getElementById('hamPop');
+function bgColorChange(listOfColors) {
+    let parentBox = document.querySelector('#hamPop #preFc #navIcnPlacement');
+    let parentBoxBgColor = window.getComputedStyle(parentBox).getPropertyValue('background-color');
+    let placeMentChilds = [
+        document.querySelector('#hamPop #preFc #navIcnPlacement #web-Banner-Nav-Name'),
+        document.querySelector('#hamPop #preFc #navIcnPlacement #prof-Nav-Name'),
+        document.querySelector('#hamPop #preFc #navIcnPlacement #projs-Nav-Name'),
+        document.querySelector('hamPop #preFc #navIcnPlacement #stats-Nav-Name')
+    ];
+    for (var i = 0; i < placeMentChilds.length; i++) {
+        placeMentChilds[i].addEventListener('mouseover', () => {
+            parentBox.style.backgroundColor = listOfColors[i];
+            placeMentChilds[i].style.color = listOfColors[1];
+        });
+        placeMentChilds[i].addEventListener('mouseout', () => {
+            parentBox.style.backgroundColor = listOfColors[1];
+            placeMentChilds[i].style.color = 'white';
+        });
+    }
+}
+bgColorChange(['red', 'black', 'lightgreen', 'bisque']);

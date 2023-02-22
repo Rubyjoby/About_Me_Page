@@ -95,19 +95,19 @@
                     let clickHam = document.getElementById("ham");
                     clickHam.addEventListener('click', openNav);
                     function openNav() {
-                        const navBox = document.querySelector('.popup-box');
+                        const origNavBox = document.getElementById('hamPop');
                         if (clickHam) {
                             clickHam.removeEventListener('click', openNav);
-                            navBox.style.opacity = 1;
-                            navBox.style.animation = 'scaled 1 0.8s ease-in-out';
-                            navBox.style.transform = 'scale(1.12, 1)';
+                            origNavBox.style.opacity = 1;
+                            origNavBox.style.animation = 'scaled 1 0.8s ease-in-out';
+                            origNavBox.style.transform = 'scale(1, 1)';
                             clickHam.addEventListener('click', closeNav);
                             function closeNav() {
                                 clickHam.removeEventListener('click', closeNav);
                                 clickHam.addEventListener('click', openNav);
-                                navBox.style.opacity = 0;
-                                navBox.style.animation = 'scaledOut 1 0.8s ease-in-out';
-                                navBox.style.transform = 'scale(0, 0)';
+                                origNavBox.style.opacity = 0;
+                                origNavBox.style.animation = 'scaledOut 1 0.8s ease-in-out';
+                                origNavBox.style.transform = 'scale(0, 0)';
                             }
                         }
                     }
@@ -2249,7 +2249,7 @@
                     </div>
                 </main>
             </div><br>
-            <div class="popup-box">
+            <!--<div class="popup-box">
                 <h2>
                     Additional Settings
                 </h2>
@@ -2286,7 +2286,7 @@
                         return document.querySelector('.img-nav').style.border = 'initial';
                     });
                 </script>
-            </div>
+            </div>-->
             <div class="popup-box2" style="opacity: 1;">
                 <div id="parBox">
                     <cour id="title-of-the-box">Website Rules</cour>
@@ -2628,7 +2628,8 @@
                 <cour>1 cookie Collected!</cour>
                 <img src="images/milk-bottle.svg" width="60" height="40">
             </div>
-            <div class="verifyPop">
+            <div id="hamPop">
+                <!-- more navIcons -->
                 <div id="side-background">
                     <img src="images/nav/A.S/coding.jpg" alt="busted code:(" height="50" width="80">
                     <img src="images/nav/A.S/phone.png" height="50" width="50" />
@@ -2636,26 +2637,86 @@
                     <img src="images/nav/A.S/stats.png" height="50" width="50" />
                     <img src="images/nav/A.S/acc.jpg" height="50" width="50" />
                 </div>
+                <!-- other Configurations -->
                 <div id="preFc">
-                    <div style="background-color: lightsteelblue; text-align: center; padding: 1px; border-top: 1px solid black; border-bottom: 1px solid black;">
+                    <div id="navIcnPlacement">
+                        <cour id="web-Banner-Nav-Name">Web-header-banner</cour>&nbsp;&nbsp;
+                        <cour id="prof-Nav-Name">Profile</cour>&nbsp;&nbsp;
+                        <cour id="projs-Nav-Name">Projects</cour>&nbsp;&nbsp;
+                        <cour id="stats-Nav-Name">Stats</cour>
+                    </div>
+                    <!-- A Name for the other settings -->
+                    <div style="border: 1px solid black; background: lightsteelblue; text-align: center; padding: 2px; border-top: 1px solid black; border-bottom: 1px solid black;">
                         <cour id="title-of-the-box">Additional Settings</cour>
                     </div>
+                    <!-- for the website -->
                     <div id="first-column">
-                        <cour id="title-of-the-box">Website Config</cour><br>
-                        <cour>Saved webpages🌎</cour>&nbsp;&nbsp;&nbsp;
-                        <cour>Search</cour>
+                        <cour id="title-of-the-box">Website Configuration</cour><br>
+                        <cour class="conName">Saved webpages🌎</cour>&nbsp;&nbsp;&nbsp;
+                        <cour class="conName">Search</cour>&nbsp;&nbsp;&nbsp;
+                        <cour class="conName">Level System</cour>
                     </div>
+                    <!-- for the user -->
                     <div id="second-column">
-                        <cour>Membership Turned off</cour>
+                        <cour id="title-of-the-box">Rights and contract</cour><br>
+                        <cour class="conName">Membership Turned off</cour>&nbsp;&nbsp;&nbsp;
+                        <cour class="conName">Agreement</cour>
                     </div>
+                </div><br>
+                <!-- A mini footer for the popUp -->
+                <div id="frame">
+                    <img src="assets/gifs/elmoFire.gif" height="50" width="50" id="popWebIcn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <cour>Informy</cour>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="discord.svg" height="30" width="30" />
                 </div>
             </div>
+            <!--<div class="popup-box">
+                <h2>
+                    Additional Settings
+                </h2>
+                <div id="firstView">
+                    <div id="con">
+                        <img src="images/nav/A.S/coding.jpg" alt="busted code:(" height="100" width="80"><br><br>
+                        &nbsp;&nbsp;<img id="pfp" style="border-radius: 50%;" src="images/nav/A.S/acc.jpg" height="50" width="50">
+                    </div><br>&nbsp;&nbsp;
+                    <div id="con2">
+                        <input type="search" name="searchme" id="inputtedValue" placeholder="Search your stuff" />
+                        <div id="mainpoint">
+                            <img src="images/nav/A.S/game.png" alt="bummer:(" height="40" width="40">
+                            <img src="images/nav/A.S/stats.png" alt="sorry it's broken :`p" height="60" width="60">
+                            <img src="images/nav/A.S/phone.png" height="40" width="40" alt="brokenPhone:)" />
+                        </div><br>
+                        <div style="overflow: scroll; height: 35; background-color: lavender; border: 1.3px solid black; padding: 5px;">
+                            &nbsp;<cour style="border: 1px solid black; margin-left: -1em; margin-bottom: -1em; padding: 4.52px; background-color: snow;">&copy;joby carpo</cour>
+                            <cour style="width: 350; border: 1px solid black; background-color: #9FA8DA; padding: 4.52px;">
+                                Battery
+                            </cour>
+                        </div>
+                    </div>
+                </div><br>
+                <script>
+                    document.getElementById('pfp').addEventListener('mouseover', checkingThePfp);
+                    function checkingThePfp() {
+                        if (document.getElementById('pfp')) {
+                            document.getElementById('pfp').style.border = '1px solid black';
+                            document.querySelector('.img-nav').style.border = '1px solid black';
+                        }
+                        return;
+                    }
+                    document.getElementById('pfp').addEventListener('mouseout', () => {
+                        return document.querySelector('.img-nav').style.border = 'initial';
+                    });
+                </script>
+            </div>-->
             <script src="javascript/Popups.js"></script>
             <div>
                 <!-- footer for the website -->
                 <footer id="footer">
                     <div style="overflow: scroll;" id="gray-scroll-bar" ="cyan-thumb">
-                        <dog id="dog-flex" style="font-size: 25px; margin-left: 35%;">Websites</dog>
+                        <dog id="dog-flex" style="font-size: 25px; margin-left: 35%;">Social medias</dog>
                         <div style="overflow: scroll; border: 2px solid black; background-color: lightgreen; padding: 5px;">
                             <a href="https://m.facebook.com/rubyabenion.abenion" target="_blank">
                                 <img height="50" width="48.6" src="facebook-square.svg" />
@@ -2664,7 +2725,9 @@
                                 <img height="50" width="48.6" src="discord.svg" />
                             </a>
                             <a>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48.6" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48.6" height="50" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
                             </a>
                         </div><hr style="border: 2px solid black;">
                         <div style="border: 2.5px solid black; border-radius: 15px; background-color: lightgray; padding: 8px;">

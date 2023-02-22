@@ -172,23 +172,6 @@ header .text:hover {
     text-align: var(--centered-Text);
 }
 
-.popup-box {
-    padding: 15.57px;
-    background-color: lightsteelblue;
-    height: 300px;
-    border: 2px solid black;
-    position: fixed;
-    overflow: scroll;
-    bottom: 3700;
-    transform: scale(0, 0);
-    opacity: 0;
-    top: 156;
-    margin-left: 15px;
-    border-radius: 10px;
-    width: 312px;
-    z-index: 999;
-}
-
 [alt="busted code:("] {
     font-family: var(--courier-font);
     font-family: bolder;
@@ -245,32 +228,63 @@ header .text:hover {
     border: 1.56px solid black;
 }
 
-.verifyPop {
+#hamPop {
     position: fixed;
     background-color: lightsteelblue;
     padding: 5px;
-    height: 12rem;
+    height: 15rem;
     width: 343px;
     top: 178;
+    transform: scale(0, 0);
+    opacity: 0;
     border: 2px solid black;
 }
 
-.verifyPop #side-background {
+#hamPop #side-background {
     background-color: white;
     border: 1px solid black;
     padding: 10px;
     border-bottom: none;
 }
 
-.verifyPop #preFc #first-column #title-of-the-box {
+#hamPop #preFc #first-column #title-of-the-box {
     background-color: lightsteelblue;
-    padding: 1.3px;
+}
+
+#hamPop #preFc #first-column #title-of-the-box,
+#hamPop #preFc #second-column #title-of-the-box {
+    padding: 2px;
     margin-left: 25%;
     margin-right: 25%;
 }
 
-.verifyPop #preFc #first-column,
-.verifyPop #preFc #second-column {
+#hamPop #preFc #second-column #title-of-the-box {
+    background-color: silver;
+}
+
+#hamPop #preFc #first-column .conName {
+    font-size: 13px;
+}
+
+#hamPop #preFc #navIcnPlacement {
+    background-color: black;
+    color: white;
+}
+
+#hamPop #frame {
+    margin-left: -5;
+    margin-right: -5;
+    background-color: snow;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#hamPop #frame cour {
+    font-style: italic;
+}
+
+#hamPop #preFc #first-column,
+#hamPop #preFc #second-column {
     text-align: left;
     width: 329 !important;
     border-right: 1px solid black;
@@ -694,7 +708,7 @@ header .text:hover {
         transform: scale(0, 0);
     }
     to {
-        transform: scale(1.12, 1);
+        transform: scale(1, 1);
     }
 }
 
@@ -718,7 +732,7 @@ header .text:hover {
 
 @keyframes scaledOut {
     from {
-        transform: scale(1.21, 1);
+        transform: scale(1, 1);
     }
     to {
         transform: scale(0, 0);
