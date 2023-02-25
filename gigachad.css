@@ -329,7 +329,6 @@ header .text:hover {
 .cookieNotification .deny-Button,
 .cookieNotification .go_back_button {
     color: black;
-    border: 1px solid black;
     padding: 2px;
 }
 
@@ -362,7 +361,6 @@ header .text:hover {
     }
     100% {
         background: linear-gradient(to bottom, aliceBlue 100%, var(--glass) 0%);
-        border: none;
     }
 }
 
@@ -379,23 +377,28 @@ header .text:hover {
     border: 1px solid black;
     padding: 1.2rem;
     opacity: 1;
+    z-index: 0;
 }
 
 @keyframes txtPopUp {
     from {
         top: -20;
+        z-index: 0;
     }
     to {
         top: 345;
+        z-index: 999;
     }
 }
 
 @keyframes txtPopUpRev {
     from {
         top: 345;
+        z-index: 999;
     }
     to {
         top: 800;
+        z-index: 0;
     }
 }
 
@@ -520,12 +523,16 @@ header .text:hover {
     background-color: white;
     color: black;
     padding: 2px;
-    height: 150;
+    height: 167;
     text-align: left;
     width: 291;
-    overflow: hidden;
+    overflow: scroll;
     font-size: 12px;
     border: 1px solid black;
+}
+
+.cookiePop #parBox #terminal-container hr {
+    border: 0.5px solid black !important;
 }
 
 .cookiePop #parBox #terminal-container input {
@@ -533,6 +540,12 @@ header .text:hover {
     border: none;
     font-family: var(--courier-font);
     color: white;
+}
+
+.cookiePop #parBox #terminal-container #descript-Box {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #codeBox {
