@@ -13,6 +13,7 @@ body {
     --Flexed: flex;
     --centered-Text: center;
     --Classic-padding: 5px;
+    --snowyEffect: url('images/bg/200w.gif');
 }
 
 .svgMe {
@@ -270,6 +271,21 @@ header .text:hover {
     background-color: black;
     color: white;
 }
+
+#hamPop #preFc #navIcnPlacement #web-Banner-Nav-Name, 
+#hamPop #preFc #navIcnPlacement #prof-Nav-Name, 
+#hamPop #preFc #navIcnPlacement #projs-Nav-Name, 
+#hamPop #preFc #navIcnPlacement #stats-Nav-Name, {
+    background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
+}
+
+#hamPop #preFc #navIcnPlacement #stats-Nav-Name:hover {
+    animation: 465ms theBox 1 ease forwards;
+}
+
+/*#hamPop #preFc #navIcnPlacement #prof-Nav-Name:hover {
+    animation: aliceBlue-d 1s 1 linear;
+}*/
 
 #hamPop #frame {
     margin-left: -5;
@@ -544,6 +560,7 @@ header .text:hover {
 
 .cookiePop #parBox #terminal-container #descript-Box {
     text-align: center;
+    z-index: 172;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -821,7 +838,7 @@ header .text:hover {
     header {
         font-size: 25px;
         padding: 30px !important;
-        background-image: url(images/nav/A.S/coding.jpg) !important;
+        background-image: url(images/bg/linuxBg.jpg) !important;
         width: 44.74375rem;
     }
     
@@ -910,7 +927,7 @@ header .text:hover {
     .navigation-bar {
         padding: 12px;
         max-height: 3.8rem !important;
-        width: 44.74375rem !important;
+        width: 56.74375rem !important;
         height: 10rem !important;
         border: 2px solid black !important;
     }
@@ -2176,7 +2193,7 @@ mark {
 }
 
 #ul-header {
-    background: black;
+    background: white;
     padding: 2rem;
     color: black;
     margin-top: 0px;

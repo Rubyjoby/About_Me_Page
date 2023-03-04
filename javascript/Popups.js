@@ -178,15 +178,21 @@ function bgColorChange(listOfColors) {
         document.querySelector('#hamPop #preFc #navIcnPlacement #projs-Nav-Name'),
         document.querySelector('hamPop #preFc #navIcnPlacement #stats-Nav-Name')
     ];
+    // looping through an array(the array is above)
     for (var i = 0; i < placeMentChilds.length; i++) {
         placeMentChilds[i].addEventListener('mouseover', () => {
             parentBox.style.backgroundColor = listOfColors[i];
-            placeMentChilds[i].style.color = listOfColors[1];
         });
         placeMentChilds[i].addEventListener('mouseout', () => {
             parentBox.style.backgroundColor = listOfColors[1];
-            placeMentChilds[i].style.color = 'white';
         });
+        /*setTimeout(() => {
+            if (parentBoxBgColor != 'black') {
+                placeMentChilds[i].style.color = listOfColors[1];
+            } else {
+                placeMentChilds[i].style.color = 'white';
+            }
+        }, 900);*/
     }
 }
 bgColorChange(['red', 'black', 'lightgreen', 'bisque']);

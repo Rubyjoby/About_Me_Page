@@ -49,6 +49,7 @@ let webScrollContain;
 let forestSfx = new Audio('assets/music/Forest - Ambient Sound Effects (192K).mp3');
 let forestBg = 'url(assets/gifs/UncomfortableWelllitDrever-size_restricted.gif)';
 let fireSfx = new Audio('assets/sfx/fire.mp3');
+let capSnow = document.querySelector('#flex-container #tradEffecter');
 ////////////////
 
 // load the browser
@@ -223,6 +224,7 @@ function startTheTouch() {
                                         wholeContainer.style.animation = '1 0.6s changeFrame ease-in';
                                         wholeContainer.style.backgroundColor = functionClass.Extra.values[2];
                                         wholeContainer.style.backgroundImage = forestBg;
+                                        //capSnow.style.backgroundImage = 'url(images/bg/200w.gif)';
                                         wholeContainer.style.color = functionClass.Assets.hrElem.Border.borderColors.c1;
                                         secondIntro.style.animation = functionClass.Assets.Animations.animation;
                                         secondIntro.style.left = functionClass.Extra.values[0];
@@ -295,6 +297,7 @@ function startTheTouch() {
                                             wholeContainer.style.backgroundImage = functionClass.Extra.values[2];
                                             wholeContainer.style.backgroundSize = functionClass.Extra.values[2];
                                             firstIntro.style.border = '2.3px solid black';
+                                            //capSnow.style.backgroundImage = functionClass.Extra.values[2];
                                             wholeContainer.style.color = 'initial';
                                         }
                                         wholeContainer.addEventListener((functionClass.Assets.listeners[2]), () => {
