@@ -141,7 +141,7 @@ header {
     position: relative;
     top: 1;
     background-image: url(images/bg/web-development-concept-person-using-260nw-1890313726.webp);
-    padding: 20px;
+    padding: 10px;
     margin-top: -0.8rem;
     resize: none;
     margin-left: -0.5em;
@@ -1033,12 +1033,13 @@ h1 {
     border: 1px solid lavender !important;
 }
 
-.navigation-bar .navSelect {
-    background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
-}
+/*.navigation-bar .navSelect {
+    background: linear-gradient(to bottom, aliceBlue 0%, var(--glass) 0%);
+}*/
 
 .navigation-bar .navSelect:hover {
-    animation: 465ms theBox 1 ease forwards;
+    /*animation: 465ms theBox 1 ease forwards;*/
+    background: url(images/bg/200w.gif);
 }
 
 .popup-box #firstView #con2 #mainpoint .navSelect {
@@ -1078,31 +1079,31 @@ h1 {
 
 @keyframes theBox {
     0% {
-        background: linear-gradient(to bottom, lightyellow 0%, var(--glass) 0%);
+        background: linear-gradient(to bottom, aliceBlue 0%, var(--glass) 0%);
     }
     10% {
-        background: linear-gradient(to bottom, lightyellow 10%, var(--glass) 10%);
+        background: linear-gradient(to bottom, aliceBlue 10%, var(--glass) 10%);
         border-bottom: 0.6px solid black;
     }
     25% {
-        background: linear-gradient(to bottom, lightyellow 25%, var(--glass) 25%);
+        background: linear-gradient(to bottom, aliceBlue 25%, var(--glass) 25%);
         border-bottom: 0.967px solid black;
     }
     45% {
-        background: linear-gradient(to bottom, lightyellow 45%, var(--glass) 45%);
+        background: linear-gradient(to bottom, aliceBlue 45%, var(--glass) 45%);
         border-bottom: 1.1px solid black;
     }
     60% {
-        background: linear-gradient(to bottom, lightyellow 60%, var(--glass) 60%);
+        background: linear-gradient(to bottom, aliceBlue 60%, var(--glass) 60%);
         border-bottom: 1.698px solid black;
     }
     81% {
-        background: linear-gradient(to bottom, lightyellow 81%, var(--glass) 81%);
+        background: linear-gradient(to bottom, aliceBlue 81%, var(--glass) 81%);
         border-bottom: 1.9px solid black;
     }
     100% {
-        background: linear-gradient(to bottom, lightyellow 100%, var(--glass) 0%);
-        box-shadow: 0 0 25px lavenderBlush, 0 0 25px snow, 0 0 50px white;
+        background: linear-gradient(to bottom, aliceBlue 100%, var(--glass) 0%);
+        /*box-shadow: 0 0 25px lavenderBlush, 0 0 25px snow, 0 0 50px white;*/
         border-bottom: 2px solid black;
     }
 }
@@ -2027,35 +2028,11 @@ nope .list-bg details li {
 details > summary {
     font-family: 'Courier New';
     font-weight: bolder;
-    list-style-type: ':-) ';
+    list-style-type: '>  ';
 }
 
 details[open] > summary {
-    animation: emotionsChange 1.3s ease-in 1;
-}
-
-@keyframes emotionsChange {
-    0% {
-        list-style-type: ':-) ';
-    }
-    25% {
-        list-style-type: '(-: ';
-    }
-    50% {
-        list-style-type: ':-) ';
-    }
-    65% {
-        list-style-type: '(-: ';
-    }
-    75% {
-        list-style-type ':-| ';
-    }
-    81.5% {
-        list-style-type: ':-/ ';
-    }
-    100% {
-        list-style-type: ':O ';
-    }
+    list-style-type: '<  ';
 }
 
 #php {

@@ -22,7 +22,7 @@ function setBrightness(percent) {
         if (cnf != null) {
             cnf = undefined;
         }
-        return changeContrast(1);
+        return //changeContrast(1);
     }
     return;
 }

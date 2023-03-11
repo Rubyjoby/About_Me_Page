@@ -68,6 +68,7 @@
                     <img class="navSelect" aria-label="menu" style="display: initial;" src="images/nav/burger2.svg" id="ham" height="40" width="55" />
                     <img class="navSelect" src="images/nav/A.S/phone.png" height="40" width="40" />
                     <img class="navSelect" src="images/nav/A.S/game.png" height="40" width="50" />
+                    <img class="navSelect" src="images/nav/A.S/stats.png" height="35" width="35" />
                     <!--<img class="navSelect" src="images/nav/A.S/stats.png" height="50" width="50" />
                     <img class="navSelect" src="images/nav/A.S/acc.jpg" height="50" width="50" />-->
                 </div>
@@ -80,6 +81,11 @@
                         } else {
                             alert('didnt work');
                         }
+                    });
+                    let navBg = document.querySelector('.navigation-bar');
+                    document.querySelector('.navigation-bar img').addEventListener('mouseover', () => {
+                        //let musicCase = [new Audio(''), new Audio()];
+                        navBg.style.backgroundColor = 'red';
                     });
                     // Open next window as a
                     var linkOpen = document.getElementById("windows");
@@ -144,12 +150,6 @@
                             'margin: 5px',
                             'bo'
                     ].join(";");
-                    let nav = document.querySelector(".navigation-bar");
-                    
-                    document.querySelector('.navigation-bar .navSelect').addEventListener('mouseout', () => {
-                        //let musicCase = [new Audio(''), new Audio()];
-                        console.log('yes');
-                    });
                 </script>
             </nav>
         </div><br>
@@ -157,7 +157,7 @@
         <div>
             <!-- header title -->
             <header title="The title of my journey">
-                <div class="white-text">
+                <div class="white-text" style="padding: 10px; background-image: url(images/bg/200w.gif);">
                     <h1 style="text-align: center;" tabindex="a" contenteditable="false">
                         My Journey as a web developer
                     </h1>

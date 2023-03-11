@@ -48,7 +48,7 @@ let Sfx = new Audio('assets/sfx/potion1.m4a');
 let webScrollContain;
 let forestSfx = new Audio('assets/music/Forest - Ambient Sound Effects (192K).mp3');
 let forestBg = 'url(assets/gifs/UncomfortableWelllitDrever-size_restricted.gif)';
-let fireSfx = new Audio('assets/sfx/fire.mp3');
+let dropSfx = new Audio('assets/sfx/justADrop.mp3');
 let capSnow = document.querySelector('#flex-container #tradEffecter');
 ////////////////
 
@@ -152,7 +152,7 @@ function startTheTouch() {
     wholeContainer.addEventListener((functionClass.Assets.listeners[0]), (event) => {
         firstIntro.style.animation = functionClass.Assets.Animations.animation;
         firstIntro.style.left = functionClass.Extra.values[0];
-        fireSfx.play();
+        dropSfx.play();
         /*effectTimeout = setTimeout(() => {
             // when touched, an img appears
             [...event.changedTouches].forEach((touch) => {
